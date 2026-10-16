@@ -35,3 +35,9 @@ Use synthetic or explicitly authorized/redacted captures. Do not commit vessel
 locations, MMSIs, serials or credentials. Document any redaction that changes
 checksums, identity or timing. Add regression tests for script behavior and report
 unperformed hardware tests as not tested.
+
+## Research roadmap
+
+See the [coverage audit and research campaign](research/README.md) before expanding
+the skill. Each run should produce a worked artifact and scoped evidence alongside
+reference changes; planned research is not executed verification.
