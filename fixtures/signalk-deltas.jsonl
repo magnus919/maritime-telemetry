@@ -1,0 +1,2 @@
+{"context": "vessels.self", "updates": [{"source": {"label": "synthetic-lab"}, "timestamp": "2026-01-01T00:00:00Z", "values": [{"path": "environment.water.temperature", "value": 293.15}]}]}
+{"context": "vessels.self", "updates": [{"source": {"label": "synthetic-lab"}, "timestamp": "2026-01-01T00:00:00Z", "values": [{"path": "environment.water.temperature", "value": null}]}]}

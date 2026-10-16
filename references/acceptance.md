@@ -72,3 +72,7 @@ Before publishing captures, remove location/MMSI/serial information or obtain th
 owner's publication authorization. Retain byte-level originals privately if needed
 for reproducibility; a redacted capture may no longer preserve checksums or identity
 relationships and must be labeled accordingly.
+
+## Worked implementation
+
+See the [fortification guide](offline-laboratory.md) for worked examples and explicit execution boundaries.

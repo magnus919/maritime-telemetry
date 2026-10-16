@@ -80,3 +80,11 @@ The NMEA2000 walkthrough is pinned to commit
 It covers headers, typed codecs, transport, node management and service-loop behavior.
 Three heading encoding vectors were also compiled and executed against that source;
 see the walkthrough and experiment record linked from SKILL.md for exact scope.
+
+## 2026-10-16 research extension
+
+The [claim ledger](../research/runs/fortification.md) and
+[retrieval register](../research/runs/source-retrievals.json) record current source
+conflicts, exclusions and scoped findings. Use these alongside the original register;
+the executed package/source versions are in the
+[software evidence](../evidence/fortification-results.md).

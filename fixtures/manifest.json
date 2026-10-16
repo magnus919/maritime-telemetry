@@ -1,0 +1,39 @@
+{
+  "license": "MIT (original synthetic fixtures)",
+  "real_vessel_data": false,
+  "created": "2026-10-16",
+  "files": [
+    {
+      "path": "heading.candump",
+      "sha256": "368aad3fb345566927affee7db9269900c1a477068edba1233f7c2a99dc9768e"
+    },
+    {
+      "path": "ais-position.nmea",
+      "sha256": "6f455173840e77a5453ec4a3de5143c1db270dc2a01a319d82b589720809eb0e"
+    },
+    {
+      "path": "signalk-deltas.jsonl",
+      "sha256": "bffaa3906d323b193e2f75a1fd0160f6f69ef88bd43d7d60449b71a824df6d46"
+    }
+  ],
+  "oracles": {
+    "heading": {
+      "pgn": 127250,
+      "src": 35,
+      "heading_rad": 1,
+      "deviation_rad": -0.1,
+      "variation_rad": 0.2
+    },
+    "ais-position": {
+      "message_type": 1,
+      "mmsi": 123456789,
+      "lon": -2,
+      "lat": 1,
+      "speed_kn": 10,
+      "course_deg": 90,
+      "heading_deg": 90,
+      "second": 30
+    }
+  },
+  "limits": "Synthetic decoding evidence; no actual vessel, RF, sensor accuracy or product compatibility"
+}

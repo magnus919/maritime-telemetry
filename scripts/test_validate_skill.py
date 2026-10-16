@@ -16,6 +16,20 @@ class ValidationTests(unittest.TestCase):
     def test_repository(self):
         self.assertEqual(validate(ROOT), [])
 
+    def test_vendor_links_excluded(self):
+        with tempfile.TemporaryDirectory() as folder:
+            root = Path(folder)
+            for name in ("SKILL.md", "README.md", "LICENSE"):
+                shutil.copy(ROOT / name, root / name)
+            shutil.copytree(ROOT / "evals", root / "evals")
+            vendor = root / "examples" / "node_modules"
+            vendor.mkdir(parents=True)
+            (vendor / "README.md").write_text("[Missing](vendor-missing.md)")
+            (root / "authored.md").write_text("[Missing](authored-missing.md)")
+            errors = validate(root)
+            self.assertFalse(any("vendor-missing" in x for x in errors))
+            self.assertTrue(any("authored-missing" in x for x in errors))
+
     def test_broken_link_and_invalid_eval(self):
         with tempfile.TemporaryDirectory() as folder:
             root = Path(folder)
