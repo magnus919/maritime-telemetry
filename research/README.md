@@ -22,3 +22,10 @@ Start with R01/R02 and R16's evaluation design. Build the offline pipeline befor
 adding devices; then deliver the three tested recipes described in R11. Keep
 hardware compatibility and normative-standard dependencies visible when unavailable.
 This directory is maintainer planning material, not a runtime dependency of the skill.
+
+## Concrete case-study input
+
+The [Boating with the Baileys ESP32 display study](../references/signalk-display-case.md)
+adds an upstream Signal K consumer example to R06/R09/R11/R12/R14/R16. Transcript
+and selected source were inspected; firmware compilation and hardware validation
+remain outstanding.
