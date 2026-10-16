@@ -1,0 +1,13 @@
+{
+  "should_trigger": [
+    "Design an NMEA 0183 to Signal K gateway.",
+    "Decode an N2K capture with CANboat.",
+    "Connect OpenCPN to my DIY boat sensors.",
+    "Plan an ESP32 marine temperature sensor."
+  ],
+  "should_not_trigger": [
+    "Build a generic automotive CAN logger.",
+    "Design a Wi-Fi thermostat without marine integration.",
+    "Design a radar RF transmitter."
+  ]
+}

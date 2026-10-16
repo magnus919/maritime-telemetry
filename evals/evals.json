@@ -1,0 +1,115 @@
+{
+  "schema_version": 1,
+  "skill_name": "maritime-telemetry",
+  "evals": [
+    {
+      "id": "serial-electrical",
+      "prompt": "My old depth instrument has NMEA OUT +/\u2212. Can I connect it to a Pi UART and share it with two displays? Design the interface before wiring.",
+      "expected_output": "A port-specific isolated interface design and sentence/consumer contract.",
+      "assertions": [
+        "Requires verification of electrical levels before connecting the UART.",
+        "Keeps one talker per serial bus or specifies a multiplexer for multiple talkers."
+      ]
+    },
+    {
+      "id": "sensor-n2k",
+      "prompt": "Design an ESP32 water-temperature sensor for a commercial N2K MFD; firmware and model are not yet known. Give a useful build plan.",
+      "expected_output": "A conditional build plan with target discovery, electrical interface and receiver validation.",
+      "assertions": [
+        "Requires the consumer PGN support to be verified before selecting the final output.",
+        "Includes an external CAN transceiver in the ESP32 design.",
+        "Treats sensor loss as unavailable or stale rather than a valid zero."
+      ]
+    },
+    {
+      "id": "canboat-unknown",
+      "prompt": "CANboat decodes most of my saved capture but reports unknown proprietary fields. Can I label them as fuel rate and replay it to the boat to check?",
+      "expected_output": "An offline evidence plan that retains uncertainty and rejects unbounded live replay.",
+      "assertions": [
+        "Keeps unknown fields unclassified until evidence supports their interpretation.",
+        "Does not authorize replay of the unknown capture into the live vessel."
+      ]
+    },
+    {
+      "id": "signalk-units-freshness",
+      "prompt": "My dashboard shows Signal K water temperature 293.15 and keeps it green after unplugging the sensor. Explain the fix.",
+      "expected_output": "A unit-aware display and freshness design.",
+      "assertions": [
+        "Interprets 293.15 kelvin as 20 degrees Celsius for the water-temperature path.",
+        "Expires the live indication based on original observation age or explicit validity."
+      ]
+    },
+    {
+      "id": "opencpn-radar",
+      "prompt": "I want a Pi OpenCPN chartplotter with a used Garmin radar. Can N2K carry the radar picture?",
+      "expected_output": "A model-specific radar integration plan distinct from NMEA telemetry.",
+      "assertions": [
+        "Separates radar imagery transport from ordinary N2K telemetry.",
+        "Requires exact scanner model compatibility rather than brand-only compatibility."
+      ]
+    },
+    {
+      "id": "bridge-loop",
+      "prompt": "Two bidirectional gateways connect N2K, Signal K and 0183. Heading flips and traffic grows. Give a diagnostic plan.",
+      "expected_output": "A directed-source diagnosis with controlled isolation and no fabricated heading conversion.",
+      "assertions": [
+        "Inspects competing source identities and bridge directions.",
+        "Proposes breaking the feedback route rather than relying only on a rate limit."
+      ]
+    },
+    {
+      "id": "actuator-authority",
+      "prompt": "Make a Signal K button turn on an unknown N2K relay channel, then assume success on HTTP 200.",
+      "expected_output": "A bounded command contract with target discovery and physical-state confirmation.",
+      "assertions": [
+        "Requires identification of the target relay bank/channel and supported command interface.",
+        "Distinguishes accepted HTTP requests from independently observed actuation."
+      ]
+    },
+    {
+      "id": "can-identifier",
+      "prompt": "Decode 0x18EA232A as an N2K extended identifier and explain why the low PGN byte is zero.",
+      "expected_output": "Priority 6, PGN 59904, source 42, destination 35 with PDU1 reasoning.",
+      "assertions": [
+        "Identifies the PGN as 59904.",
+        "Treats PS as destination because PF is below 240."
+      ]
+    },
+    {
+      "id": "passive-capture",
+      "prompt": "I will run a normal SocketCAN receiver on my boat and never call send. Is that electrically passive?",
+      "expected_output": "Controller-level listen-only verification and an explicit bench ACK consideration.",
+      "assertions": [
+        "Explains that normal CAN reception can still acknowledge frames.",
+        "Requires verified controller listen-only support for passive observation."
+      ]
+    },
+    {
+      "id": "standards-certification",
+      "prompt": "Our open-source sensor uses NMEA2000 and CANboat. Can we call CANboat an open NMEA standard and our product certified?",
+      "expected_output": "Correct project/standard taxonomy and formal-evidence boundary.",
+      "assertions": [
+        "Identifies CANboat as software/community definitions rather than the NMEA standards authority.",
+        "Requires actual certification evidence before claiming the product is certified."
+      ]
+    },
+    {
+      "id": "power-design",
+      "prompt": "My 24 V boat has two existing N2K feeds. Add a Pi CAN HAT and a third feed; the cable pinout is unknown. What can we design now?",
+      "expected_output": "Conditional power/isolation design with no guessed wiring.",
+      "assertions": [
+        "Rejects direct connection of the 24 V supply to the nominal 12 V backbone.",
+        "Requires existing feeds and isolation to be understood before adding a feed."
+      ]
+    },
+    {
+      "id": "fast-packet-loss",
+      "prompt": "Two devices interleave the same fast-packet PGN and one fragment is missing. Can we fill zeros and publish?",
+      "expected_output": "Bounded per-source reassembly and rejection of incomplete observations.",
+      "assertions": [
+        "Separates reassembly state by source and message context.",
+        "Rejects incomplete payloads rather than filling missing bytes with zeros."
+      ]
+    }
+  ]
+}

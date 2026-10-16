@@ -1,0 +1,2 @@
+input_port,input_identity,input_message,input_field,input_units,input_reference,output_destination,output_message_or_path,output_units,output_reference,validity_rule,expiry_policy,rate_limit,source_priority,information_loss,loop_prevention,verification_evidence
+serial-gnss,example-only,RMC,speed,knots,ground,local-application,navigation.speedOverGround,m/s,ground,valid-fix-required,choose-for-use-case,choose-for-port-budget,explicit-source-selection,document-fix-metadata-not-carried,never-return-to-origin,not-tested
