@@ -1,0 +1,257 @@
+{
+  "schema_version": 1,
+  "retrieved_date": "2026-10-16",
+  "tool": "GroktoCrawl CLI search/scrape",
+  "scope": "bounded discovery, not exhaustive research",
+  "raw_responses_retained_in_repository": false,
+  "queries": [
+    {
+      "id": "Q01",
+      "query": "site:signalk.org specification subscriptions security server plugins",
+      "response_sha256": "8ea24c42c76b400a9abccc3aa22983e141583164c5750f0407c6fd456d8317e8",
+      "coverage": {
+        "scope": "upstream_page",
+        "page": 1,
+        "offset": 0,
+        "captured_results": 20,
+        "returned_results": 3,
+        "omitted_results": 17,
+        "has_more_in_page": true,
+        "upstream_has_more": null,
+        "complete": false,
+        "pagination_enforcement": null,
+        "next_upstream_page": 2,
+        "continuation_consistency": "repeat upstream query; ordering may change (not a snapshot)"
+      },
+      "candidate_urls": [
+        "https://signalk.org/specification/1.5.0/doc/security.html",
+        "https://signalk.org/specification/1.7.0/doc/subscription_protocol.html",
+        "https://signalk.org/specification/1.7.0/doc/security.html"
+      ]
+    },
+    {
+      "id": "Q02",
+      "query": "site:github.com/canboat/canboat Rust CLI analyzer candump",
+      "response_sha256": "3e269a9a3cfee40378756365eec93dd2615153fbf2a4e529bd68a58e1d7f44c7",
+      "coverage": {
+        "scope": "upstream_page",
+        "page": 1,
+        "offset": 0,
+        "captured_results": 20,
+        "returned_results": 3,
+        "omitted_results": 17,
+        "has_more_in_page": true,
+        "upstream_has_more": null,
+        "complete": false,
+        "pagination_enforcement": null,
+        "next_upstream_page": 2,
+        "continuation_consistency": "repeat upstream query; ordering may change (not a snapshot)"
+      },
+      "candidate_urls": [
+        "https://github.com/canboat/canboat/pull/1031",
+        "https://github.com/canboat/canboat/issues/998",
+        "https://github.com/canboat/canboat"
+      ]
+    },
+    {
+      "id": "Q03",
+      "query": "site:opencpn.org manual connections Signal K NMEA 2000 priority",
+      "response_sha256": "c7941aea5c2cef442f2d43d1be0281dd778f196351690d5d9656f263e3083fc9",
+      "coverage": {
+        "scope": "upstream_page",
+        "page": 1,
+        "offset": 0,
+        "captured_results": 25,
+        "returned_results": 3,
+        "omitted_results": 22,
+        "has_more_in_page": true,
+        "upstream_has_more": null,
+        "complete": false,
+        "pagination_enforcement": null,
+        "next_upstream_page": 2,
+        "continuation_consistency": "repeat upstream query; ordering may change (not a snapshot)"
+      },
+      "candidate_urls": [
+        "https://opencpn.org/wiki/dokuwiki/doku.php?id=opencpn:manual_basic:set_options:connections:data_priority",
+        "https://opencpn.org/wiki/dokuwiki/doku.php?id=opencpn%3Amanual_basic%3Aset_options%3Aconnections&do=export_pdf",
+        "https://opencpn.org/wiki/dokuwiki/doku.php?id=opencpn:manual_basic:set_options:connections&do=export_pdf&rev=1716680457"
+      ]
+    },
+    {
+      "id": "Q04",
+      "query": "site:signalk.org/SensESP getting started PlatformIO ESP32",
+      "response_sha256": "211f386630901af5238c56e7bd1a7bc4b39dd496892ef6a1a6e41b8c699f9ade",
+      "coverage": {
+        "scope": "upstream_page",
+        "page": 1,
+        "offset": 0,
+        "captured_results": 10,
+        "returned_results": 3,
+        "omitted_results": 7,
+        "has_more_in_page": true,
+        "upstream_has_more": null,
+        "complete": false,
+        "pagination_enforcement": null,
+        "next_upstream_page": 2,
+        "continuation_consistency": "repeat upstream query; ordering may change (not a snapshot)"
+      },
+      "candidate_urls": [
+        "https://signalk.org/SensESP/pages/getting_started/",
+        "https://signalk.org/SensESP/pages/tutorials/arduino_style/",
+        "https://signalk.org/SensESP/"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "S01",
+      "requested_url": "https://signalk.org/specification/1.7.0/doc/subscription_protocol.html",
+      "resolved_url": null,
+      "status": "retrieved",
+      "response_sha256": "b290e38807bd3e34a5251d346dbd0e08daa5a69a34b9db178e10d45afc3648fb",
+      "response_bytes": 7529,
+      "markdown_characters": 6920,
+      "extraction_quality": {
+        "score": 1.0,
+        "checks": {
+          "boilerplate": "pass",
+          "completeness": "pass",
+          "block_detected": "pass",
+          "volume": "pass"
+        },
+        "detail": "all checks passed"
+      },
+      "disposition": "research lead; runtime behavior unverified",
+      "findings": "reconnaissance.md#source-level-findings-and-decisions"
+    },
+    {
+      "id": "S02",
+      "requested_url": "https://signalk.org/specification/1.7.0/doc/security.html",
+      "resolved_url": null,
+      "status": "retrieved",
+      "response_sha256": "78275d2c4e705c78f1ca8d8b05d5945d030831dcaa762bb115571cbf0a0ab5b6",
+      "response_bytes": 6324,
+      "markdown_characters": 5623,
+      "extraction_quality": {
+        "score": 1.0,
+        "checks": {
+          "boilerplate": "pass",
+          "completeness": "pass",
+          "block_detected": "pass",
+          "volume": "pass"
+        },
+        "detail": "all checks passed"
+      },
+      "disposition": "research lead; runtime behavior unverified",
+      "findings": "reconnaissance.md#source-level-findings-and-decisions"
+    },
+    {
+      "id": "S03",
+      "requested_url": "https://github.com/canboat/canboat",
+      "resolved_url": null,
+      "status": "retrieved",
+      "response_sha256": "fe69d0fad9a436ecf443cd43894cb83e972beb730a919aa27b3a653ec82e0139",
+      "response_bytes": 32890,
+      "markdown_characters": 31466,
+      "extraction_quality": null,
+      "disposition": "research lead; runtime behavior unverified",
+      "findings": "reconnaissance.md#source-level-findings-and-decisions"
+    },
+    {
+      "id": "S04",
+      "requested_url": "https://github.com/canboat/canboat/pull/1031",
+      "resolved_url": null,
+      "status": "retrieved",
+      "response_sha256": "104da05238bc4e3a41a9c1b1aa14fe70870a757101b03cda5b55d852ce313cc0",
+      "response_bytes": 16827,
+      "markdown_characters": 15499,
+      "extraction_quality": null,
+      "disposition": "research lead; runtime behavior unverified",
+      "findings": "reconnaissance.md#source-level-findings-and-decisions"
+    },
+    {
+      "id": "S05",
+      "requested_url": "https://opencpn.org/wiki/dokuwiki/doku.php?id=opencpn:manual_basic:set_options:connections:data_priority",
+      "resolved_url": null,
+      "status": "retrieved",
+      "response_sha256": "1036013021b9edd2383c121150a8ab228323dc3ece989b6674b43e668dd35f1b",
+      "response_bytes": 8292,
+      "markdown_characters": 7829,
+      "extraction_quality": {
+        "score": 1.0,
+        "checks": {
+          "boilerplate": "pass",
+          "completeness": "pass",
+          "block_detected": "pass",
+          "volume": "pass"
+        },
+        "detail": "all checks passed"
+      },
+      "disposition": "research lead; runtime behavior unverified",
+      "findings": "reconnaissance.md#source-level-findings-and-decisions"
+    },
+    {
+      "id": "S06",
+      "requested_url": "https://signalk.org/SensESP/pages/getting_started/",
+      "resolved_url": null,
+      "status": "retrieved",
+      "response_sha256": "c7f029d6fa81b1edb589196d8dcfd013969780e627bb65759f6a8b18eb703618",
+      "response_bytes": 9187,
+      "markdown_characters": 8650,
+      "extraction_quality": {
+        "score": 1.0,
+        "checks": {
+          "boilerplate": "pass",
+          "completeness": "pass",
+          "block_detected": "pass",
+          "volume": "pass"
+        },
+        "detail": "all checks passed"
+      },
+      "disposition": "research lead; runtime behavior unverified",
+      "findings": "reconnaissance.md#source-level-findings-and-decisions"
+    },
+    {
+      "id": "S07",
+      "requested_url": "https://signalk.org/specification/latest/",
+      "resolved_url": null,
+      "status": "retrieved",
+      "response_sha256": "4c88ebf41ce3b0ad5e236194d9a74ed0eb0c062e621eaa861d0f1d02577445ce",
+      "response_bytes": 421,
+      "markdown_characters": 106,
+      "extraction_quality": {
+        "score": 0.49,
+        "checks": {
+          "boilerplate": "fail",
+          "completeness": "fail",
+          "block_detected": "pass",
+          "volume": "pass"
+        },
+        "detail": "boilerplate:fail, completeness:fail"
+      },
+      "disposition": "redirect-only; version unresolved",
+      "findings": "reconnaissance.md#source-level-findings-and-decisions"
+    },
+    {
+      "id": "S08",
+      "requested_url": "https://demo.signalk.org/documentation/",
+      "resolved_url": null,
+      "status": "retrieved",
+      "response_sha256": "c4f1195ea40c688ea0cad7fc54eb1cd01290005dbf4e19f2442ba92967fe1d47",
+      "response_bytes": 1711,
+      "markdown_characters": 1398,
+      "extraction_quality": {
+        "score": 0.95,
+        "checks": {
+          "boilerplate": "pass",
+          "completeness": "pass",
+          "block_detected": "pass",
+          "volume": "pass"
+        },
+        "detail": "all checks passed"
+      },
+      "disposition": "research lead; runtime behavior unverified",
+      "findings": "reconnaissance.md#source-level-findings-and-decisions"
+    }
+  ]
+}
