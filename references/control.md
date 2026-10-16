@@ -64,3 +64,7 @@ Avoid adding a prototype as the sole protective control for steering, propulsion
 bilge, fire suppression or other essential functions. This is a project architecture
 constraint: preserve the existing independent function while proving the new path.
 Stop on unexpected actuation, lost manual override or uncertain target identity.
+
+## Worked implementation
+
+See the [fortification guide](security-and-controls.md) for worked examples and explicit execution boundaries.

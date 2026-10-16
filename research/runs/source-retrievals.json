@@ -1,0 +1,214 @@
+{
+  "retrieved": "2026-10-16",
+  "method": "GroktoCrawl bounded scrape and four follow-up searches",
+  "note": "Hashes identify local response envelopes; raw third-party responses are not redistributed. Hashes alone do not preserve source snapshots.",
+  "sources": [
+    {
+      "id": "NMEA",
+      "url": "https://www.nmea.org/nmea-2000.html",
+      "exit": 1,
+      "bytes": 726,
+      "sha256": "6a04a84058acfd72f24d138f62c27eaddf2c92e9f2cf00cf652e2bc7034c88fc",
+      "characters": 0,
+      "disposition": "retrieval failed; no new claim"
+    },
+    {
+      "id": "0183",
+      "url": "https://www.nmea.org/nmea-0183.html",
+      "exit": 0,
+      "bytes": 4453,
+      "sha256": "d9126e65862216f50477731ff2c8a83f749043ee4806f1ffbcaf7fe783b3252d",
+      "characters": 4072,
+      "disposition": "retained for scoped claims"
+    },
+    {
+      "id": "OneNet",
+      "url": "https://www.nmea.org/nmea-onenet.html",
+      "exit": 1,
+      "bytes": 726,
+      "sha256": "6a04a84058acfd72f24d138f62c27eaddf2c92e9f2cf00cf652e2bc7034c88fc",
+      "characters": 0,
+      "disposition": "retrieval failed; no new claim"
+    },
+    {
+      "id": "OpenPlotter",
+      "url": "https://openplotter.readthedocs.io/latest/",
+      "exit": 0,
+      "bytes": 794,
+      "sha256": "5b117c38cd9937962132943ce218e681ee3e32959eccc3a793069f6532f29b8d",
+      "characters": 455,
+      "disposition": "discovery only; replaced by OPgetting"
+    },
+    {
+      "id": "SKplugins",
+      "url": "https://demo.signalk.org/documentation/develop/plugins/server_plugin.html",
+      "exit": 0,
+      "bytes": 15759,
+      "sha256": "c497452da77422de5b5a26bde38a978e8755c53983276d0e9c4e8c8726fe5a4e",
+      "characters": 14989,
+      "disposition": "retained for scoped claims"
+    },
+    {
+      "id": "SKsecurity",
+      "url": "https://demo.signalk.org/documentation/setup/security.html",
+      "exit": 0,
+      "bytes": 386,
+      "sha256": "251cb5c5b41b9461784b4f3ad8aa45a7589f63bc2948db835bb8066cab6dc608",
+      "characters": 53,
+      "disposition": "rejected: Cannot GET error page despite exit zero"
+    },
+    {
+      "id": "SKput",
+      "url": "https://signalk.org/specification/1.7.0/doc/put.html",
+      "exit": 0,
+      "bytes": 2574,
+      "sha256": "ec457c583ecce49a796181c2f957cf7ab71ee3da4fc2d4003c0d500425122e50",
+      "characters": 2176,
+      "disposition": "retained for scoped claims"
+    },
+    {
+      "id": "SKmultiple",
+      "url": "https://signalk.org/specification/1.7.0/doc/data_model_multiple_values.html",
+      "exit": 0,
+      "bytes": 7348,
+      "sha256": "06bf57a580adcd2ba1eb599485409adef7745cdc19b027977debb56d293a3cce",
+      "characters": 6692,
+      "disposition": "retained for scoped claims"
+    },
+    {
+      "id": "GPSD",
+      "url": "https://gpsd.gitlab.io/gpsd/NMEA.html",
+      "exit": 0,
+      "bytes": 103648,
+      "sha256": "0ef26e08631a76ab1f16b788736073f55dfb07a89f46e6417301dbcc0e91d396",
+      "characters": 99631,
+      "disposition": "retained for scoped claims"
+    },
+    {
+      "id": "AIS",
+      "url": "https://github.com/M0r13n/pyais",
+      "exit": 0,
+      "bytes": 30848,
+      "sha256": "20b64827f40518d381cb37fbbe69ba2af6b1a91256c51ab4c372f488b2944ddd",
+      "characters": 29693,
+      "disposition": "retained for scoped claims"
+    },
+    {
+      "id": "Radar",
+      "url": "https://github.com/opencpn-radar-pi/radar_pi",
+      "exit": 0,
+      "bytes": 3329,
+      "sha256": "1457c0181554becd783482ecdc71ee2f776f2fd18cf87909080fa45a13fd0efa",
+      "characters": 2828,
+      "disposition": "retained for scoped claims"
+    },
+    {
+      "id": "TIcan",
+      "url": "https://www.ti.com/product/ISO1042",
+      "exit": 0,
+      "bytes": 20489,
+      "sha256": "c3b0c7c2274037f561cd920e06cf8ceedd2cfc1311ab986f4ed1ba10fdb74d10",
+      "characters": 19504,
+      "disposition": "retained for scoped claims"
+    },
+    {
+      "id": "TIserial",
+      "url": "https://www.ti.com/product/ISO1410",
+      "exit": 0,
+      "bytes": 19124,
+      "sha256": "7e8fb4a41c9e15a0f1074477efdf806fe3585325d590682316aeb77f00b61276",
+      "characters": 18100,
+      "disposition": "retained for scoped claims"
+    },
+    {
+      "id": "Garmin",
+      "url": "https://www8.garmin.com/manuals/webhelp/GUID-1415AAD0-FE63-42A6-8F8D-DB713D616122/EN-US/Technical_Reference_for_Garmin_NMEA_2000_Products_EN-US.pdf",
+      "exit": 1,
+      "bytes": 577,
+      "sha256": "d3baebd9312c3fd734d16cf6a5e31ca8ed7b2678fc59d567004c4d6660ce1964",
+      "characters": 0,
+      "disposition": "retrieval failed; no new claim"
+    },
+    {
+      "id": "Actisense",
+      "url": "https://actisense.com/wp-content/uploads/2021/01/Everything-you-need-to-know-about-NMEA-0183-1.pdf",
+      "exit": 1,
+      "bytes": 528,
+      "sha256": "9e4c63a50c64233d3c7859d7d9b624662d506361b76e794d5d08d34f0a03a465",
+      "characters": 0,
+      "disposition": "retrieval failed; no new claim"
+    },
+    {
+      "id": "TWAI",
+      "url": "https://docs.espressif.com/projects/esp-idf/en/stable/esp32/api-reference/peripherals/twai.html",
+      "exit": 0,
+      "bytes": 54518,
+      "sha256": "f74ffb42c220a1d7ec25f7bb8fdad5ca75fb483fffd46fb1d788c1666d5953af",
+      "characters": 52390,
+      "disposition": "retained for scoped claims"
+    },
+    {
+      "id": "Kernel",
+      "url": "https://docs.kernel.org/networking/can.html",
+      "exit": 0,
+      "bytes": 52792,
+      "sha256": "9f0fbc0580dbe5c50cc69d3a49357a52b512ca3e02f1e40315c0d7c0c72a32c2",
+      "characters": 50185,
+      "disposition": "retained for scoped claims"
+    },
+    {
+      "id": "SensESP",
+      "url": "https://signalk.org/SensESP/pages/getting_started/",
+      "exit": 0,
+      "bytes": 9187,
+      "sha256": "c7f029d6fa81b1edb589196d8dcfd013969780e627bb65759f6a8b18eb703618",
+      "characters": 8650,
+      "disposition": "retained for scoped claims"
+    },
+    {
+      "id": "OCPN",
+      "url": "https://opencpn.org/wiki/dokuwiki/doku.php?id=opencpn:manual_basic:set_options:connections:data_priority",
+      "exit": 0,
+      "bytes": 8292,
+      "sha256": "1036013021b9edd2383c121150a8ab228323dc3ece989b6674b43e668dd35f1b",
+      "characters": 7829,
+      "disposition": "retained for scoped claims"
+    },
+    {
+      "id": "GarminHTML",
+      "url": "https://www8.garmin.com/manuals/webhelp/GUID-1415AAD0-FE63-42A6-8F8D-DB713D616122/EN-US/GUID-7803C22A-BA02-4E92-BF60-6038F30EB817.html",
+      "exit": 0,
+      "bytes": 6216,
+      "sha256": "8959ba95c8a25da6301e088ce63acb45272ab5e68054aa0bf4df91c543f60c3e",
+      "characters": 5496,
+      "disposition": "retained for scoped claims"
+    },
+    {
+      "id": "OPgetting",
+      "url": "https://openplotter.readthedocs.io/latest/getting_started/downloading.html",
+      "exit": 0,
+      "bytes": 7088,
+      "sha256": "9eeafa04bea9a7fbb4f45cbe995455dfa88e50b5b09266e7fa3597c6700d125f",
+      "characters": 6630,
+      "disposition": "retained for scoped claims"
+    },
+    {
+      "id": "OPdocs",
+      "url": "https://docs.sailoog.com/openplotter",
+      "exit": 1,
+      "bytes": 466,
+      "sha256": "8eb42cd01822c396808b61a36503ab9b432890869046c21139bfbea0aca72e59",
+      "characters": 0,
+      "disposition": "retrieval failed; no new claim"
+    },
+    {
+      "id": "TI1042data",
+      "url": "https://www.ti.com/lit/ds/symlink/iso1042.pdf",
+      "exit": 1,
+      "bytes": 475,
+      "sha256": "7175f1e88acb9ca4f02d0d7e285e389b107b6909e6c5ff774a616a3caeb28514",
+      "characters": 0,
+      "disposition": "retrieval failed; no new claim"
+    }
+  ]
+}

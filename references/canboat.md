@@ -75,3 +75,7 @@ Original reverse-engineering experiment pattern:
 A CANboat decode establishes what that implementation inferred. The next acceptance
 step remains the intended consumer and the physical measurement. It does not
 establish NMEA certification, timing compliance or a field-proven device.
+
+## Worked implementation
+
+See the [fortification guide](offline-laboratory.md) for worked examples and explicit execution boundaries.

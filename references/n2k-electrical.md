@@ -75,3 +75,7 @@ shield/return separation or supply identity is unresolved. Never make a resistan
 measurement on an energized backbone. When observing waveforms, use an appropriate
 probe and grounding arrangement; do not bridge an isolation barrier with a grounded
 scope clip. Record the instrument configuration with the result.
+
+## Worked implementation
+
+See the [fortification guide](electrical-worked-design.md) for worked examples and explicit execution boundaries.

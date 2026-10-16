@@ -110,3 +110,7 @@ measurement → sensor sample → encoded bytes → decoder → Signal K → dis
 Require correct units/source/instance at all points and explicit unavailable/stale
 behavior after unplugging. Record firmware versions and the consumer's actual
 support. A complete bench chain remains unverified for vessel environmental use.
+
+## Worked implementation
+
+See the [fortification guide](embedded-recipes.md) for worked examples and explicit execution boundaries.

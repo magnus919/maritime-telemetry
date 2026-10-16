@@ -19,10 +19,10 @@ records, with clear distinctions between a working prototype and certification.
 | Contents | Provides |
 |---|---|
 | `SKILL.md` | Self-contained project and hardware integration workflow |
-| `references/` | Twelve guides covering protocols, wiring, software, controls and verification |
-| `templates/` | Device contract, translation matrix, commissioning and protocol worksheets |
-| `scripts/` | Offline JSON sentence/CAN-ID inspector and regression tests |
-| `examples/`, `evidence/` | Offline C++ encoding probe and recorded upstream comparison |
+| `references/` | Focused guides covering protocols, wiring, calibration, software, controls and verification |
+| `templates/` | Contracts, power budgets, calibration, capture, control and recovery worksheets |
+| `scripts/` | Offline inspector, fault models, engineering calculations and regression tests |
+| `examples/`, `evidence/` | C++ protocol probes, two ESP32 builds, local Signal K lab and recorded results |
 | `evals/` | Output-quality scenarios and separate trigger/rubric review examples |
 
 ## Quick Start
@@ -67,6 +67,11 @@ licensed standards and certification process; this package supplies neither.
 
 See the [source register](references/sources.md) for the standards-owner,
 manufacturer and open-source project references, and [contributing guide](CONTRIBUTING.md)
-for offline checks. The fifteen authored evaluation scenarios are not claimed
+for offline checks. The authored evaluation scenarios are not claimed
 model-run results. Hardware interoperability and formal certification remain
 project-specific tests.
+
+The [executed research report](research/runs/fortification.md) links the new recipes,
+source decisions and remaining equipment-dependent tests. Start the dependency-free
+lab with `python3 scripts/telemetry_lab.py`; it reports a fresh value and then its
+stale state without opening any device or network connection.

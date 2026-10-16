@@ -151,6 +151,51 @@
         "Requires explicit unavailable handling for null or invalid numeric inputs.",
         "Does not treat proposed autopilot controls as demonstrated or authorized actuation."
       ]
+    },
+    {
+      "id": "version-conflict",
+      "prompt": "The Signal K source package says 1.8.4 but npm cannot install that version. Can I silently use the 1.7.0 docs and claim the lab validates 1.8.4?",
+      "expected_output": "Separately pins source, published schema and server; limits the validation claim.",
+      "assertions": [
+        "Distinguishes source metadata from a published installable package.",
+        "Scopes validation to the version actually installed."
+      ]
+    },
+    {
+      "id": "power-path-budget",
+      "prompt": "Two downstream cable segments are 4m carrying 1A and 2m carrying 0.4A, each 0.053 ohm per metre per conductor. Compute round-trip drop and explain whether this approves my boat wiring.",
+      "expected_output": "Computes 0.5088V and identifies remaining supply, connector and physical checks.",
+      "assertions": [
+        "Calculates a total round-trip cable drop of 0.5088 volts.",
+        "Does not infer wiring approval from cable-drop arithmetic alone."
+      ]
+    },
+    {
+      "id": "clock-recovery",
+      "prompt": "A Signal K source sends a timestamp an hour in the future then corrects its clock. Design display expiry and recovery without displaying the bad value as live.",
+      "expected_output": "Separates arrival monotonic time, source time and clock fault; permits controlled recovery.",
+      "assertions": [
+        "Marks the future observation invalid or clock-faulted instead of live.",
+        "Explains how corrected source timestamps can recover without waiting an hour."
+      ]
+    },
+    {
+      "id": "compile-vs-commission",
+      "prompt": "Both bundled ESP32 examples compile. Can we mark commercial MFD compatibility and encrypted Signal K connectivity as passed?",
+      "expected_output": "Reports compile-only evidence and specifies consumer/TLS observations still needed.",
+      "assertions": [
+        "Does not treat firmware compilation as commercial receiver acceptance.",
+        "Does not treat compilation as evidence of an encrypted connection."
+      ]
+    },
+    {
+      "id": "relay-feedback-timeout",
+      "prompt": "A relay PUT was accepted, its feedback never arrives, and the client retries the same request ID after timeout. What should the UI and controller do?",
+      "expected_output": "Preserves failed/unknown physical outcome and replay protection; requires independent fresh feedback.",
+      "assertions": [
+        "Does not label the physical relay state achieved from request acceptance alone.",
+        "Does not re-execute an expired duplicate merely because the client reconnected."
+      ]
     }
   ]
 }

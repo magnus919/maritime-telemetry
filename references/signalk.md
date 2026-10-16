@@ -93,3 +93,7 @@ or control, and verify that rollback also disables any persistent output service
 See [the ESP32 display case study](signalk-display-case.md) for a configurable
 Signal K consumer, pinned upstream source observations, a wind-display example
 and the tests needed to adapt it to other instrument panels.
+
+## Worked implementation
+
+See the [fortification guide](signalk-implementation.md) for worked examples and explicit execution boundaries.

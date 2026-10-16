@@ -42,7 +42,7 @@ def validate(root: Path) -> list[str]:
     if len(skill.splitlines()) >= 500:
         errors.append("SKILL.md exceeds line budget")
     for path in root.rglob("*.md"):
-        if ".git" in path.parts:
+        if set(path.relative_to(root).parts) & {".git", "node_modules", ".pio", ".venv", "__pycache__"}:
             continue
         content = path.read_text()
         if path.parent.name == "references" and len(content) > 60000:

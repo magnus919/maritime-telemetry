@@ -68,6 +68,27 @@ The optional [host encoding probe](examples/heading_oracle.cpp) and
 [executed evidence](evidence/nmea2000-heading-study.md) show how to check independent
 byte vectors against a pinned upstream implementation without opening a bus.
 
+## Implementation laboratories and worked designs
+
+Use these focused additions when moving from a design to reproducible evidence:
+
+| Need | Resource |
+|---|---|
+| Fault fixtures, bounded parser/reassembly and source freshness | [Offline laboratory](references/offline-laboratory.md) |
+| Signal K REST, subscriptions, nulls, reconnects and plugin contracts | [Signal K implementation](references/signalk-implementation.md) |
+| ESP32 compilation and version-sensitive TLS | [Embedded recipes](references/embedded-recipes.md) |
+| Isolation and a worked power budget | [Electrical design](references/electrical-worked-design.md) |
+| Depth, tank and heading calculations | [Measurement calibration](references/measurement-calibration.md) |
+| Pi recovery and OpenCPN source priorities | [Deployment and consumers](references/deployment-and-consumers.md) |
+| Authorization, feedback and simulated relay failures | [Security and controls](references/security-and-controls.md) |
+| AIS multipart boundaries and serial resynchronization | [Serial and AIS profiles](references/serial-ais-profiles.md) |
+| Radar models and adjacent protocol decisions | [Radar and adjacent systems](references/radar-and-adjacent.md) |
+
+Consult [executed results](evidence/fortification-results.md) before describing any
+recipe as tested. The [research ledger](research/runs/fortification.md) identifies
+unresolved physical, normative and behavioral validation. These are teaching
+examples: their bounded profiles are not complete production protocol stacks.
+
 ## Workflow
 
 1. **Discover the actual boundary.** Record connector and pin labels, voltage,

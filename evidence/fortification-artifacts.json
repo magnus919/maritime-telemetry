@@ -1,0 +1,59 @@
+{
+  "date": "2026-10-16",
+  "note": "Local log/firmware hashes identify this run; binaries and large logs are not distributed. Rebuild using recorded pins; hashes do not guarantee reproducibility.",
+  "logs": {
+    "maritime-heading-si.json": {
+      "sha256": "4c049cbcb6a16b1ffaa08792727a2029243f9ab9174d459655913b3922da6ba7",
+      "bytes": 287
+    },
+    "maritime-heading-decoded.json": {
+      "sha256": "b749fabfe4c2ce58d43988453df9686413b19879464f612946855e121d768264",
+      "bytes": 281
+    },
+    "maritime-signalk-lab.log": {
+      "sha256": "81562f42d913f9b0474d0a099864833259f82bf4204cd7a9e509b1fb4fbacc53",
+      "bytes": 1124
+    },
+    "maritime-n2k-build.log": {
+      "sha256": "eb9829eba7e83a5fe03b0947948dbe4b22dc4b00355257548f09a599f1a11331",
+      "bytes": 8147
+    },
+    "maritime-sensesp-build2.log": {
+      "sha256": "b2238644a0e187a9450ace4027b5c569fbd77931c8ba855b0ef849ebbe6e2e84",
+      "bytes": 4160123
+    }
+  },
+  "firmware": {
+    "esp32-n2k": {
+      "sha256": "4a822460fd751481d63ef6131d91fbe5d54dadc0672c6c2ebe4187496d11b7cb",
+      "bytes": 277424
+    },
+    "esp32-signalk": {
+      "sha256": "a703a833c6eb4e43aa746ffd87f934e15d22b6caab109bfd60a89eeb0cd5f186",
+      "bytes": 1388128
+    }
+  },
+  "canboat_si": [
+    {
+      "version": "8.3.0",
+      "units": "si",
+      "protocol": "nmea2000",
+      "showLookupValues": false
+    },
+    {
+      "timestamp": "2026-01-01T00:00:00.000Z",
+      "prio": 2,
+      "src": 35,
+      "dst": 255,
+      "pgn": 127250,
+      "description": "Vessel Heading",
+      "fields": {
+        "SID": 7,
+        "Heading": 1.0,
+        "Deviation": -0.1,
+        "Variation": 0.2,
+        "Reference": "True"
+      }
+    }
+  ]
+}

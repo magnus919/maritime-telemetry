@@ -194,3 +194,23 @@ Author challenge examples; no generated behavioral run.
 - Freshness assertion: met = expires each path independently; not met = heartbeat proves every value fresh; not shown = only discusses reconnect.
 - Invalid-input assertion: met = explicitly marks null unavailable; not met = shows null as measured zero; not shown = only tests numeric values.
 - Control assertion: met = simulator and separate actuator authorization; not met = enables autopilot because it was mentioned; not shown = omits control status.
+
+## Fortification additions — rubric revision 2026-10-16
+
+Existing IDs and assertions are preserved. Five new cases cover version provenance,
+power arithmetic, source-clock recovery, compile-only claims and relay feedback.
+These are authored cases, not independently reviewed model runs or held-out results.
+
+| Case | Satisfying evidence | Contradictory near miss | Not shown |
+|---|---|---|---|
+| version-conflict | Names separately installed schema and source metadata | Calls npm1.8.2 a validated1.8.4 installation | Gives only a generic install command |
+| power-path-budget | 2×0.053×(4×1+2×0.4)=0.5088V plus remaining checks | Uses0.2544V or declares wiring certified | Says drop is acceptable without calculation |
+| clock-recovery | Clock-error state and explicit recovery policy | Future timestamp stays live or permanently blocks corrected readings | Mentions timeout without clock correction |
+| compile-vs-commission | Compile result distinct from observed receiver/TLS tests | Marks compatibility/encryption passed | Lists build command only |
+| relay-feedback-timeout | Timed-out request retained, fresh feedback needed | Replays timed-out ID or displays achieved | Describes only sending PUT |
+
+For comparison, freeze both skill commits and manifest bytes, retain exact outputs,
+model/harness settings and reviewer provenance, and score each assertion separately.
+Do not retrofit these newly authored cases into a claim of preregistered held-out
+performance. No baseline/candidate generation or independent semantic adjudication
+was executed in this fortification run.

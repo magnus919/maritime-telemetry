@@ -71,3 +71,7 @@ Plugins extend capabilities but have their own releases and device constraints.
 Use the application's supported plugin manager and pin/document the installed
 version. Installation is not proof of interoperability.
 [OpenCPN plugin catalog](https://opencpn.org/OpenCPN/info/downloadplugins.html).
+
+## Worked implementation
+
+See the [fortification guide](deployment-and-consumers.md) for worked examples and explicit execution boundaries.
