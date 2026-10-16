@@ -110,6 +110,36 @@
         "Separates reassembly state by source and message context.",
         "Rejects incomplete payloads rather than filling missing bytes with zeros."
       ]
+    },
+    {
+      "id": "direct-protocol-source-study",
+      "prompt": "I want to implement N2K in Rust without using NMEA2000. What should I learn from its code and how should I verify my implementation?",
+      "expected_output": "A pinned layered implementation plan with independent oracles and explicit source-versus-standard boundaries.",
+      "assertions": [
+        "Identifies concrete upstream source files or symbols for the implementation study.",
+        "Distinguishes upstream implementation choices from normative protocol requirements.",
+        "Proposes independently calculated byte vectors in addition to encoder-decoder round trips."
+      ]
+    },
+    {
+      "id": "heading-field-status",
+      "prompt": "My direct PGN 127250 decoder treats every 16-bit field as unsigned and converts FFFF to zero. Review the approach using the source study.",
+      "expected_output": "Signedness and unavailable/out-of-range handling corrected using the pinned heading codec.",
+      "assertions": [
+        "Identifies deviation and variation as signed fields in the studied codec.",
+        "Distinguishes the signed 0x7FFF unavailable representation from unsigned 0xFFFF.",
+        "Preserves unavailable or error status instead of converting it to a measured zero."
+      ]
+    },
+    {
+      "id": "short-fast-packet",
+      "prompt": "My new N2K stack sends every payload of eight bytes or fewer as a single unframed CAN payload. Can I use a single global assembly buffer on receive?",
+      "expected_output": "PGN-based framing and bounded context-aware reassembly design.",
+      "assertions": [
+        "Explains that a PGN classified as fast packet still needs fast-packet framing when its payload is short.",
+        "Rejects a single global reassembly buffer for interleaved sources.",
+        "Does not claim the host heading experiment verifies transport or address claiming."
+      ]
     }
   ]
 }

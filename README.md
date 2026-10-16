@@ -19,9 +19,10 @@ records, with clear distinctions between a working prototype and certification.
 | Contents | Provides |
 |---|---|
 | `SKILL.md` | Self-contained project and hardware integration workflow |
-| `references/` | Eleven guides covering protocols, wiring, software, controls and verification |
-| `templates/` | Device contract, translation matrix and commissioning record |
+| `references/` | Twelve guides covering protocols, wiring, software, controls and verification |
+| `templates/` | Device contract, translation matrix, commissioning and protocol worksheets |
 | `scripts/` | Offline JSON sentence/CAN-ID inspector and regression tests |
+| `examples/`, `evidence/` | Offline C++ encoding probe and recorded upstream comparison |
 | `evals/` | Output-quality scenarios and separate trigger/rubric review examples |
 
 ## Quick Start
@@ -66,6 +67,6 @@ licensed standards and certification process; this package supplies neither.
 
 See the [source register](references/sources.md) for the standards-owner,
 manufacturer and open-source project references, and [contributing guide](CONTRIBUTING.md)
-for offline checks. The twelve authored evaluation scenarios are not claimed
+for offline checks. The fifteen authored evaluation scenarios are not claimed
 model-run results. Hardware interoperability and formal certification remain
 project-specific tests.
