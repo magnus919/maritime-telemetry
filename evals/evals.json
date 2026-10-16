@@ -140,6 +140,17 @@
         "Rejects a single global reassembly buffer for interleaved sources.",
         "Does not claim the host heading experiment verifies transport or address claiming."
       ]
+    },
+    {
+      "id": "signalk-display-adaptation",
+      "prompt": "Use the Boating with the Baileys square ESP32 display example to design a wind repeater. Can we trust its current number whenever the WebSocket is connected, and assume the video already demonstrates direct N2K and autopilot control?",
+      "expected_output": "An attributed display adaptation that separates video-time features, current source and untested hardware, with per-path freshness and semantic checks.",
+      "assertions": [
+        "Separates the video\u2019s future-work discussion from the later separately documented direct-N2K variant.",
+        "Requires per-path freshness checks even when the WebSocket remains connected.",
+        "Requires explicit unavailable handling for null or invalid numeric inputs.",
+        "Does not treat proposed autopilot controls as demonstrated or authorized actuation."
+      ]
     }
   ]
 }

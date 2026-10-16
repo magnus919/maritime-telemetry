@@ -87,3 +87,9 @@ Keep the server's write capability off untrusted Wi-Fi and public networks. Appl
 least privilege to plugins and clients; review the deployment and authentication configuration against the installed
 server documentation. Save a rollback snapshot before enabling conversion
 or control, and verify that rollback also disables any persistent output service.
+
+## Practical consumer example
+
+See [the ESP32 display case study](signalk-display-case.md) for a configurable
+Signal K consumer, pinned upstream source observations, a wind-display example
+and the tests needed to adapt it to other instrument panels.

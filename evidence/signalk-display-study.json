@@ -1,0 +1,22 @@
+{
+  "scope": "transcript and selected source inspection only; no visual video review, firmware compilation or hardware test",
+  "upstream_commit": "b3c440a932a624496e4da7f0adb17bcec51796aa",
+  "sources": [
+    {
+      "url": "https://www.youtube.com/watch?v=FAPvdz6oN7A",
+      "retrieval": "GroktoCrawl scrape",
+      "date": "2026-10-16",
+      "response_sha256": "b6a58d26e626a7675e7dd2f68010592b84351ef45338b86a837e95ab99afcb8e",
+      "response_bytes": 25915,
+      "full_response_retained_in_repository": false
+    },
+    {
+      "url": "https://www.waveshare.com/wiki/ESP32-S3-Touch-LCD-4",
+      "retrieval": "GroktoCrawl scrape",
+      "date": "2026-10-16",
+      "response_sha256": "c6e556b920224539474192b6985f6b63e6220e6ddc524502b2e34573e8978942",
+      "response_bytes": 41676,
+      "full_response_retained_in_repository": false
+    }
+  ]
+}

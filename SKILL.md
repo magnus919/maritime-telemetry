@@ -52,6 +52,7 @@ Read only the relevant resources:
 | Implement N2K directly or inspect library internals | [Pinned source walkthrough](references/nmea2000-source-study.md) | Layered protocol design and independent vectors |
 | ESP32 sensor or Raspberry Pi gateway | [Implementation paths](references/implementation.md) | Versioned build and integration plan |
 | CANboat captures and decoder workflow | [CANboat](references/canboat.md) | Pinned decode evidence and unknown-field ledger |
+| Build a configurable ESP32 instrument display | [Signal K display case study](references/signalk-display-case.md) | Display contract and scoped adaptation plan |
 | Signal K data model, APIs and server integration | [Signal K](references/signalk.md) | Source-aware application contract |
 | OpenCPN connections, chartplotters and radar | [OpenCPN](references/opencpn.md) | Verified consumer configuration |
 | Translation, chartplotters, radar or software UI | [Gateways and applications](references/gateways.md) | Semantic mapping and source policy |

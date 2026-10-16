@@ -185,3 +185,12 @@ the satisfying example is **met** only for that assertion. Case IDs are stable.
   - Satisfying: The host probe tests three heading setter vectors only.
   - Contradiction: The probe validates addressing and transport.
   - Omission: Omits the experiment scope.
+
+## signalk-display-adaptation
+
+Author challenge examples; no generated behavioral run.
+
+- Video/current-source assertion: met = distinguishes proposed video N2K work from the later NMEA folder; not met = says the video demonstrates it; not shown = omits the distinction.
+- Freshness assertion: met = expires each path independently; not met = heartbeat proves every value fresh; not shown = only discusses reconnect.
+- Invalid-input assertion: met = explicitly marks null unavailable; not met = shows null as measured zero; not shown = only tests numeric values.
+- Control assertion: met = simulator and separate actuator authorization; not met = enables autopilot because it was mentioned; not shown = omits control status.
