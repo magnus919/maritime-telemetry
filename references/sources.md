@@ -72,3 +72,11 @@ not have the same behavior. Inspect configuration and defaults before attaching.
 When sources conflict, record the claim, version, authority and missing evidence.
 Offer the smallest resolving test or document request. Never turn a plausible
 community decoding into an unqualified standard requirement.
+
+## Source-code study
+
+The NMEA2000 walkthrough is pinned to commit
+`5b7b9fc3ccc18e30ebfba92da6486cffc6251595` (inspected 2026-10-16).
+It covers headers, typed codecs, transport, node management and service-loop behavior.
+Three heading encoding vectors were also compiled and executed against that source;
+see the walkthrough and experiment record linked from SKILL.md for exact scope.

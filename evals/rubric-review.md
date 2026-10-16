@@ -140,3 +140,48 @@ the satisfying example is **met** only for that assertion. Case IDs are stable.
   - Satisfying: Expire the incomplete message and record loss.
   - Contradiction: Pad the missing fragment with zeros.
   - Omission: Omits missing-fragment handling.
+
+## direct-protocol-source-study
+
+- Assertion: Identifies concrete upstream source files or symbols for the implementation study.
+  - Satisfying: Trace N2kMessages.cpp and SetN2kCANBufMsg.
+  - Contradiction: No source inspection is needed.
+  - Omission: Mentions the repository without source locations.
+- Assertion: Distinguishes upstream implementation choices from normative protocol requirements.
+  - Satisfying: The 20-frame parse budget is an implementation choice.
+  - Contradiction: Every N2K node must use a 20-frame parse budget.
+  - Omission: Does not distinguish authority.
+- Assertion: Proposes independently calculated byte vectors in addition to encoder-decoder round trips.
+  - Satisfying: Compute expected bytes by hand, then compare with the setter.
+  - Contradiction: Round-trip agreement alone proves correctness.
+  - Omission: Omits the oracle.
+
+## heading-field-status
+
+- Assertion: Identifies deviation and variation as signed fields in the studied codec.
+  - Satisfying: Deviation and variation use signed integers.
+  - Contradiction: Every field is unsigned.
+  - Omission: Only discusses heading.
+- Assertion: Distinguishes the signed 0x7FFF unavailable representation from unsigned 0xFFFF.
+  - Satisfying: Signed NA is 0x7FFF; unsigned NA is 0xFFFF.
+  - Contradiction: All fields use FFFF for NA.
+  - Omission: Does not specify sentinels.
+- Assertion: Preserves unavailable or error status instead of converting it to a measured zero.
+  - Satisfying: Keep unavailable/error as explicit status.
+  - Contradiction: Convert missing data to measured zero.
+  - Omission: Omits invalid data handling.
+
+## short-fast-packet
+
+- Assertion: Explains that a PGN classified as fast packet still needs fast-packet framing when its payload is short.
+  - Satisfying: Short fast-packet PGNs still carry framing.
+  - Contradiction: Length alone selects unframed transmission.
+  - Omission: Discusses only long messages.
+- Assertion: Rejects a single global reassembly buffer for interleaved sources.
+  - Satisfying: Key bounded assembly by source and message context.
+  - Contradiction: One global buffer is sufficient.
+  - Omission: Omits reassembly state.
+- Assertion: Does not claim the host heading experiment verifies transport or address claiming.
+  - Satisfying: The host probe tests three heading setter vectors only.
+  - Contradiction: The probe validates addressing and transport.
+  - Omission: Omits the experiment scope.

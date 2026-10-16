@@ -5,6 +5,10 @@ Select actual hardware and pin the dependencies before converting a recipe into
 flashable code. No hardware, firmware compilation or live network operation has
 been performed merely by installing this skill.
 
+For a port or implementation without this library, follow the source walkthrough
+linked from SKILL.md. Treat it as executable protocol knowledge with explicit
+implementation boundaries, not merely a package recommendation.
+
 ## ESP32 sensor published on N2K
 
 Use the NMEA2000 C++ library with a compatible controller backend. Its examples and

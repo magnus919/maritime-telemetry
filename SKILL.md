@@ -49,6 +49,7 @@ Read only the relevant resources:
 | Serial wiring, sentences, GNSS or AIS | [NMEA 0183](references/nmea0183.md) | Port and sentence contract |
 | Backbone design or power fault | [N2K electrical design](references/n2k-electrical.md) | Drawing and electrical budget |
 | PGN decoding, identity, transport or publishing | [N2K protocol](references/n2k-protocol.md) | PGN and identity contract |
+| Implement N2K directly or inspect library internals | [Pinned source walkthrough](references/nmea2000-source-study.md) | Layered protocol design and independent vectors |
 | ESP32 sensor or Raspberry Pi gateway | [Implementation paths](references/implementation.md) | Versioned build and integration plan |
 | CANboat captures and decoder workflow | [CANboat](references/canboat.md) | Pinned decode evidence and unknown-field ledger |
 | Signal K data model, APIs and server integration | [Signal K](references/signalk.md) | Source-aware application contract |
@@ -60,6 +61,11 @@ Read only the relevant resources:
 Start a substantial project with [device contract](templates/device-contract.md).
 Use [translation matrix](templates/translation-matrix.csv) for bridges and
 [commissioning record](templates/commissioning.md) for bench/vessel work.
+
+For a direct implementation, use [protocol worksheet](templates/protocol-implementation.md).
+The optional [host encoding probe](examples/heading_oracle.cpp) and
+[executed evidence](evidence/nmea2000-heading-study.md) show how to check independent
+byte vectors against a pinned upstream implementation without opening a bus.
 
 ## Workflow
 
