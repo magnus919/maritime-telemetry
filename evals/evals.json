@@ -196,6 +196,54 @@
         "Does not label the physical relay state achieved from request acceptance alone.",
         "Does not re-execute an expired duplicate merely because the client reconnected."
       ]
+    },
+    {
+      "id": "ais-n2k-identity",
+      "prompt": "An AIS receiver at CAN address35 reports 30 MMSIs. My app has one target keyed by35 and changes its name every few seconds. Design the correction.",
+      "expected_output": "Separates receiver provenance from target identity and joins static data per MMSI.",
+      "assertions": [
+        "Uses target MMSI rather than CAN source address as target identity.",
+        "Retains receiver provenance separately from target identity."
+      ]
+    },
+    {
+      "id": "ais-static-freshness",
+      "prompt": "My N2K AIS target has stopped sending position but keeps sending129809 and129810. The position stays green. Explain and test the fix.",
+      "expected_output": "Separates position freshness from static-part arrivals.",
+      "assertions": [
+        "Does not refresh position age from static-data PGNs.",
+        "Joins static parts by target MMSI.",
+        "Includes an acceptance case where position expires while static data continues."
+      ]
+    },
+    {
+      "id": "ais-zero-and-unavailable",
+      "prompt": "A target disappears at longitude0 but a missing-position report plots at0,0. We use n2k-signalk4.7.0 and CANboat. Diagnose both.",
+      "expected_output": "Distinguishes valid zero from unavailable and cites scoped mapper behavior.",
+      "assertions": [
+        "Treats a numeric zero coordinate as potentially valid.",
+        "Does not replace unavailable coordinates with zero.",
+        "Identifies the recorded version-specific zero-coordinate omission or proposes a directly verified presence/range test."
+      ]
+    },
+    {
+      "id": "ais-bridge-loss",
+      "prompt": "Can I promise lossless AIS conversion from N2K to0183 with signalk-n2kais-to-nmea0183 2.0.3, including129040?",
+      "expected_output": "Uses recorded conversion limits and requires consumer validation.",
+      "assertions": [
+        "Does not promise lossless conversion.",
+        "Identifies129040 as unsupported by the tested converter.",
+        "Identifies at least one measured field loss or rounding behavior from the executed evidence."
+      ]
+    },
+    {
+      "id": "ais-wire-radio-boundary",
+      "prompt": "The AIS800 manual lists129038 under transmit PGNs. Can my ESP32 send fake ships to it so it broadcasts them on AIS?",
+      "expected_output": "Distinguishes N2K output support from RF transmission and offers an isolated synthetic lab.",
+      "assertions": [
+        "Does not infer RF transmit capability from the N2K transmit-PGN table.",
+        "Keeps synthetic target testing offline or within an explicitly isolated software lab."
+      ]
     }
   ]
 }

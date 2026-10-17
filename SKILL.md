@@ -3,7 +3,7 @@ name: maritime-telemetry
 description: >-
   Design, build, decode, bridge, and troubleshoot open maritime telemetry and device interoperability
   using NMEA 0183 and NMEA 2000 (N2K). Use for DIY boat sensors, actuators,
-  chartplotter telemetry, AIS sentence handling, CAN PGNs, marine gateways,
+  chartplotter telemetry, AIS over serial or N2K, CAN PGNs, marine gateways,
   and Raspberry Pi or ESP32 integration with commercial instruments through
   Signal K, CANboat, or OpenCPN. Do not use for generic automotive CAN,
   standalone electronics or firmware work, radar RF design, or claims of
@@ -46,6 +46,7 @@ Read only the relevant resources:
 | Task | Read | Deliver |
 |---|---|---|
 | Choose architecture or verify a claim | [Sources and authority](references/sources.md) | Evidence-backed scope and uncertainty |
+| AIS targets over N2K, identity, static joins or chartplotter bridges | [AIS over NMEA 2000](references/ais-nmea2000.md) | Target mapping, freshness and receiver acceptance |
 | Serial wiring, sentences, GNSS or AIS | [NMEA 0183](references/nmea0183.md) | Port and sentence contract |
 | Backbone design or power fault | [N2K electrical design](references/n2k-electrical.md) | Drawing and electrical budget |
 | PGN decoding, identity, transport or publishing | [N2K protocol](references/n2k-protocol.md) | PGN and identity contract |

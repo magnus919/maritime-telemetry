@@ -79,3 +79,9 @@ establish NMEA certification, timing compliance or a field-proven device.
 ## Worked implementation
 
 See the [fortification guide](offline-laboratory.md) for worked examples and explicit execution boundaries.
+
+## AIS on the backbone
+
+Use [AIS over NMEA 2000](ais-nmea2000.md) for native target PGNs, receiver/MMSI
+identity, partial static data, Signal K contexts and consumer paths. The
+[AIS laboratory](ais-n2k-laboratory.md) records tested cases and conversion losses.

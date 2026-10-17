@@ -59,3 +59,9 @@ small vector passes. Report unavailable values according to each AIS field's
 semantics; an unavailable coordinate must not become a target at (0,0). Track target
 age separately from TCP liveness and own-ship age. This skill's AIS examples receive
 and decode only; they do not transmit RF or configure a radio.
+
+## AIS on the backbone
+
+Use [AIS over NMEA 2000](ais-nmea2000.md) for native target PGNs, receiver/MMSI
+identity, partial static data, Signal K contexts and consumer paths. The
+[AIS laboratory](ais-n2k-laboratory.md) records tested cases and conversion losses.

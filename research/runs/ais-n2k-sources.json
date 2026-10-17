@@ -1,0 +1,193 @@
+{
+  "accessed": "2026-10-16 America/New_York (2026-10-17 UTC during probes)",
+  "method": "GroktoCrawl manual bounded search and scrape; pinned code and package inspection",
+  "searches": [
+    {
+      "query": "site:github.com/SignalK n2k-signalk 129038 129809 AIS",
+      "sha256": "571ff3416190c912dadcbd3ef73eba5ccb296671db87c28c06257b40785444c8",
+      "returned_urls": [
+        "https://github.com/signalk/n2k-signalk",
+        "https://github.com/signalk/signalk-server",
+        "https://github.com/signalk/specification"
+      ],
+      "coverage": {
+        "scope": "upstream_page",
+        "page": 1,
+        "offset": 0,
+        "captured_results": 8,
+        "returned_results": 3,
+        "omitted_results": 5,
+        "has_more_in_page": true,
+        "upstream_has_more": null,
+        "complete": false,
+        "pagination_enforcement": null,
+        "next_upstream_page": 2,
+        "continuation_consistency": "repeat upstream query; ordering may change (not a snapshot)"
+      },
+      "decision": "discovery only; primary pages retained separately; redundant translated PDFs and historical setup article not used"
+    },
+    {
+      "query": "site:opencpn.org NMEA 2000 AIS Signal K targets",
+      "sha256": "f91c097626082174bc7a6c8399796746ac45b01a4428e376fd03bf44cb3e2bf9",
+      "returned_urls": [
+        "https://mail.opencpn.org/wiki/dokuwiki/doku.php?id=opencpn:manual_basic:set_options:connections:singnalk",
+        "https://opencpn.org/wiki/dokuwiki/doku.php?id=opencpn%3Asupplementary_software%3Asignalk%3Aa6",
+        "https://opencpn.org/wiki/dokuwiki/doku.php?id=opencpn%3Amanual_basic%3Aset_options%3Aconnections%3Asingnalk"
+      ],
+      "coverage": {
+        "scope": "upstream_page",
+        "page": 1,
+        "offset": 0,
+        "captured_results": 20,
+        "returned_results": 3,
+        "omitted_results": 17,
+        "has_more_in_page": true,
+        "upstream_has_more": null,
+        "complete": false,
+        "pagination_enforcement": null,
+        "next_upstream_page": 2,
+        "continuation_consistency": "repeat upstream query; ordering may change (not a snapshot)"
+      },
+      "decision": "discovery only; primary pages retained separately; redundant translated PDFs and historical setup article not used"
+    },
+    {
+      "query": "site:garmin.com AIS 800 NMEA 2000 129038 129810",
+      "sha256": "fd61d9dfc9798c1eed0e2a8cd4873fc1c814474aab93e71970b8cbc1e9fe805b",
+      "returned_urls": [
+        "https://static.garmin.com/pumac/AIS_800_Install_Instructions_EN.pdf",
+        "https://static.garmin.com/pumac/AIS_800_Install_Instructions_NB.pdf",
+        "https://www8.garmin.com/manuals/webhelp/GUID-61A42529-ECEC-4B79-9F77-A5D87D90A579/EN-US/GUID-F6E8195D-CFA3-40B7-9BEA-68EDD00813E7.html"
+      ],
+      "coverage": {
+        "scope": "upstream_page",
+        "page": 1,
+        "offset": 0,
+        "captured_results": 15,
+        "returned_results": 3,
+        "omitted_results": 12,
+        "has_more_in_page": true,
+        "upstream_has_more": null,
+        "complete": false,
+        "pagination_enforcement": null,
+        "next_upstream_page": 2,
+        "continuation_consistency": "repeat upstream query; ordering may change (not a snapshot)"
+      },
+      "decision": "discovery only; primary pages retained separately; redundant translated PDFs and historical setup article not used"
+    }
+  ],
+  "sources": [
+    {
+      "id": "GarminAIS",
+      "url": "https://www8.garmin.com/manuals/webhelp/GUID-61A42529-ECEC-4B79-9F77-A5D87D90A579/EN-US/GUID-F6E8195D-CFA3-40B7-9BEA-68EDD00813E7.html",
+      "exit": 0,
+      "bytes": 2045,
+      "sha256": "b5ed426d17bdd68582aa7051d708af3b686c094f33e5a6fb30a4b15ed6ce1bda",
+      "characters": 1411,
+      "disposition": "retained",
+      "claims": [
+        "Manufacturer lists AIS target PGNs as N2K transmit outputs; receive support is separately enumerated.",
+        "129813 is not listed in the retrieved table."
+      ]
+    },
+    {
+      "id": "OpenCPN-SK",
+      "url": "https://opencpn.org/wiki/dokuwiki/doku.php?id=opencpn:manual_basic:set_options:connections:singnalk",
+      "exit": 0,
+      "bytes": 7094,
+      "sha256": "978f03b549cefc6c7856f2c51364454a3f79cafb1e655632ef4c6c5f46eae958",
+      "characters": 6653,
+      "disposition": "retained",
+      "claims": [
+        "Native Signal K and converted0183 are distinct connection options.",
+        "AIS conversion requires a dedicated plugin; generic conversion cannot be assumed.",
+        "Generic TCP connection warning is not a claim that WebSocket avoids TCP."
+      ]
+    },
+    {
+      "id": "n2k-signalk",
+      "url": "https://github.com/SignalK/n2k-signalk",
+      "exit": 0,
+      "bytes": 3954,
+      "sha256": "2bd4db46950a8bfa3d995a8f440510df83cf6015ec537b3361d3cbd58c50e12a",
+      "characters": 3316,
+      "disposition": "retained",
+      "claims": [
+        "The project maps decoded N2K PGNs to Signal K; package source, not README alone, determines per-field behavior."
+      ]
+    },
+    {
+      "id": "TwoCan",
+      "url": "https://github.com/TwoCanPlugIn/TwoCanPlugIn",
+      "exit": 0,
+      "bytes": 14024,
+      "sha256": "a59e4f14f00987411059aeef051b764ab0bf1fa95afd0520c5ec4f8d6ff21111",
+      "characters": 13291,
+      "disposition": "retained",
+      "claims": [
+        "A separate OpenCPN N2K plugin integration path exists; exact platform and PGN support must be checked."
+      ]
+    },
+    {
+      "id": "SKcontext",
+      "url": "https://signalk.org/specification/1.7.0/doc/data_model.html",
+      "exit": 0,
+      "bytes": 14157,
+      "sha256": "b3145d061fc409ef445d5b3467c15cf578c912499c8d175feb495c64a3eebc61",
+      "characters": 13177,
+      "disposition": "retained",
+      "claims": [
+        "Signal K identifies other-vessel entities by contexts; source metadata is separate."
+      ]
+    },
+    {
+      "id": "CANboat",
+      "url": "https://github.com/canboat/canboat",
+      "exit": 0,
+      "bytes": 32890,
+      "sha256": "fe69d0fad9a436ecf443cd43894cb83e972beb730a919aa27b3a653ec82e0139",
+      "characters": 31466,
+      "disposition": "retained",
+      "claims": [
+        "CANboat decodes N2K; original generated fixtures are needed to test selected paths."
+      ]
+    },
+    {
+      "id": "AISplugin",
+      "url": "https://github.com/sbender9/signalk-n2kais-to-nmea0183",
+      "exit": 0,
+      "bytes": 1176,
+      "sha256": "bbf763393db63893d73cb70220bb42cf0c4ccd426091d8ecc229df2c07507cf7",
+      "characters": 766,
+      "disposition": "retained",
+      "claims": [
+        "A dedicated project converts N2K AIS to0183; supported PGNs and losses require code/probe inspection."
+      ]
+    },
+    {
+      "id": "ShortPGNs",
+      "url": "https://github.com/canboat/canboat/pull/848",
+      "exit": 0,
+      "bytes": 14181,
+      "sha256": "cb2f57c227fcd9c92bf47507c10ed53a3fb67202f2bd21a27d0923ec30a78f48",
+      "characters": 13088,
+      "disposition": "retained",
+      "claims": [
+        "Merged database change includes older shorter AIS payload forms; it is community/vendor-report evidence, not normative specification."
+      ]
+    }
+  ],
+  "code_sha256": {
+    "src/N2kMessages.cpp": "3377dcec4b31cd57bbd2a8d58983631aa1ee3b7aa9838313b4e833d19a69df4a",
+    "src/N2kMessages.h": "d069b0980758dd0e4681442e343e1c8f109beb0ce03bbb0f1582feb19c2d99e2",
+    "src/N2kTypes.h": "216b62b8a52031c995a38f68d3999a6d5ceb1c0d0b28abd153929822a6d42510",
+    "dist/mmsi-context.js (n2k-signalk)": "fa6ee156ca7e4d8b471cdf51a7742bfd8c4702ccd635bb4a5512d64c43b60315",
+    "dist/pgns/129038.js (n2k-signalk)": "8a73f0b30552e21335736886281bb3d93d6ac8aa28f3ff9abd6ba276a915ab41",
+    "dist/pgns/129039.js (n2k-signalk)": "71b74cd0f70ebe900d378b44ed03eaf8823cec1af9492fb880ac31996b806b5f",
+    "dist/pgns/129040.js (n2k-signalk)": "e7551dc71c1a76eaf31cfef71275819787e9708dacc72a8c713c85e66d62f317",
+    "dist/pgns/129041.js (n2k-signalk)": "a651fdbe3d132e22a4862604b87725865916d1ef5f2296ec1f83d9d60e52894a",
+    "dist/pgns/129809.js (n2k-signalk)": "5187a3772d72d73d164d5cda7614e802b3e0982cf1b5ae8943be5c39960027e4",
+    "dist/pgns/129810.js (n2k-signalk)": "3feae5ce452c1185bcb9df6d6185cae3c46cac399a0d1bbee5ecd919141dde42",
+    "dist/index.js": "f8c282a531142645904f6d76507c95874b7ef1f8bfdd0d98d11f376d3b17eecc"
+  },
+  "preservation": "Original analysis and synthetic outputs retained. Raw third-party response bodies not redistributed; their hashes alone are not publicly reproducible snapshots."
+}

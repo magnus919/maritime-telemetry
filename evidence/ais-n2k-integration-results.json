@@ -1,0 +1,1895 @@
+{
+  "passed": true,
+  "scope": "offline functions and event bus; no server or chartplotter",
+  "known_limitations": [
+    "mapper4.7.0 omits zero-longitude position",
+    "mapper omits unavailable position instead of clearing prior state",
+    "0183 conversion is lossy; inspect independent pyais report"
+  ],
+  "trials": [
+    {
+      "deltas": [
+        {
+          "updates": [
+            {
+              "source": {
+                "label": "",
+                "type": "NMEA2000",
+                "pgn": 129038,
+                "src": "35"
+              },
+              "timestamp": "2026-01-01T00:00:00.000Z",
+              "values": [
+                {
+                  "path": "navigation.speedOverGround",
+                  "value": 5
+                },
+                {
+                  "path": "navigation.courseOverGroundTrue",
+                  "value": 1
+                },
+                {
+                  "path": "navigation.position",
+                  "value": {
+                    "longitude": -2,
+                    "latitude": 1
+                  }
+                },
+                {
+                  "path": "navigation.rateOfTurn",
+                  "value": 0
+                },
+                {
+                  "path": "navigation.headingTrue",
+                  "value": 0.5
+                },
+                {
+                  "path": "navigation.state",
+                  "value": "motoring"
+                },
+                {
+                  "path": "",
+                  "value": {
+                    "mmsi": "123456789"
+                  }
+                },
+                {
+                  "path": "sensors.ais.class",
+                  "value": "A"
+                }
+              ]
+            }
+          ],
+          "context": "vessels.urn:mrn:imo:mmsi:123456789"
+        },
+        {
+          "updates": [
+            {
+              "source": {
+                "label": "",
+                "type": "NMEA2000",
+                "pgn": 129039,
+                "src": "35"
+              },
+              "timestamp": "2026-01-01T00:00:00.000Z",
+              "values": [
+                {
+                  "path": "navigation.speedOverGround",
+                  "value": 5
+                },
+                {
+                  "path": "navigation.courseOverGroundTrue",
+                  "value": 1
+                },
+                {
+                  "path": "navigation.position",
+                  "value": {
+                    "longitude": -2,
+                    "latitude": 1
+                  }
+                },
+                {
+                  "path": "navigation.headingTrue",
+                  "value": 0.5
+                },
+                {
+                  "path": "",
+                  "value": {
+                    "mmsi": "123456789"
+                  }
+                },
+                {
+                  "path": "sensors.ais.class",
+                  "value": "B"
+                }
+              ]
+            }
+          ],
+          "context": "vessels.urn:mrn:imo:mmsi:123456789"
+        },
+        {
+          "updates": [
+            {
+              "source": {
+                "label": "",
+                "type": "NMEA2000",
+                "pgn": 129809,
+                "src": "35"
+              },
+              "timestamp": "2026-01-01T00:00:00.000Z",
+              "values": [
+                {
+                  "path": "sensors.ais.class",
+                  "value": "B"
+                },
+                {
+                  "path": "",
+                  "value": {
+                    "name": "LAB TARGET"
+                  }
+                },
+                {
+                  "path": "",
+                  "value": {
+                    "mmsi": "123456789"
+                  }
+                }
+              ]
+            }
+          ],
+          "context": "vessels.urn:mrn:imo:mmsi:123456789"
+        },
+        {
+          "updates": [
+            {
+              "source": {
+                "label": "",
+                "type": "NMEA2000",
+                "pgn": 129810,
+                "src": "35"
+              },
+              "timestamp": "2026-01-01T00:00:00.000Z",
+              "values": [
+                {
+                  "path": "design.length",
+                  "value": {
+                    "overall": 12
+                  }
+                },
+                {
+                  "path": "design.aisShipType",
+                  "value": {
+                    "id": 36,
+                    "name": "Sailing"
+                  }
+                },
+                {
+                  "path": "design.beam",
+                  "value": 4
+                },
+                {
+                  "path": "",
+                  "value": {
+                    "communication": {
+                      "callsignVhf": "LAB123"
+                    }
+                  }
+                },
+                {
+                  "path": "sensors.ais.fromBow",
+                  "value": 8
+                },
+                {
+                  "path": "sensors.ais.fromCenter",
+                  "value": 1
+                },
+                {
+                  "path": "",
+                  "value": {
+                    "mmsi": "123456789"
+                  }
+                }
+              ]
+            }
+          ],
+          "context": "vessels.urn:mrn:imo:mmsi:123456789"
+        },
+        {
+          "updates": [
+            {
+              "source": {
+                "label": "",
+                "type": "NMEA2000",
+                "pgn": 129038,
+                "src": "35"
+              },
+              "timestamp": "2026-01-01T00:00:00.000Z",
+              "values": [
+                {
+                  "path": "navigation.speedOverGround",
+                  "value": 5
+                },
+                {
+                  "path": "navigation.courseOverGroundTrue",
+                  "value": 1
+                },
+                {
+                  "path": "navigation.position",
+                  "value": {
+                    "longitude": -2,
+                    "latitude": 1
+                  }
+                },
+                {
+                  "path": "navigation.rateOfTurn",
+                  "value": 0
+                },
+                {
+                  "path": "navigation.headingTrue",
+                  "value": 0.5
+                },
+                {
+                  "path": "navigation.state",
+                  "value": "motoring"
+                },
+                {
+                  "path": "",
+                  "value": {
+                    "mmsi": "123456789"
+                  }
+                },
+                {
+                  "path": "sensors.ais.class",
+                  "value": "A"
+                }
+              ]
+            }
+          ],
+          "context": "vessels.urn:mrn:imo:mmsi:123456789"
+        },
+        {
+          "updates": [
+            {
+              "source": {
+                "label": "",
+                "type": "NMEA2000",
+                "pgn": 129039,
+                "src": "35"
+              },
+              "timestamp": "2026-01-01T00:00:00.000Z",
+              "values": [
+                {
+                  "path": "navigation.speedOverGround",
+                  "value": 5
+                },
+                {
+                  "path": "navigation.courseOverGroundTrue",
+                  "value": 1
+                },
+                {
+                  "path": "navigation.position",
+                  "value": {
+                    "longitude": -2,
+                    "latitude": 1
+                  }
+                },
+                {
+                  "path": "navigation.headingTrue",
+                  "value": 0.5
+                },
+                {
+                  "path": "",
+                  "value": {
+                    "mmsi": "123456789"
+                  }
+                },
+                {
+                  "path": "sensors.ais.class",
+                  "value": "B"
+                }
+              ]
+            }
+          ],
+          "context": "vessels.urn:mrn:imo:mmsi:123456789"
+        },
+        {
+          "updates": [
+            {
+              "source": {
+                "label": "",
+                "type": "NMEA2000",
+                "pgn": 129809,
+                "src": "35"
+              },
+              "timestamp": "2026-01-01T00:00:00.000Z",
+              "values": [
+                {
+                  "path": "sensors.ais.class",
+                  "value": "B"
+                },
+                {
+                  "path": "",
+                  "value": {
+                    "name": "LAB TARGET"
+                  }
+                },
+                {
+                  "path": "",
+                  "value": {
+                    "mmsi": "123456789"
+                  }
+                }
+              ]
+            }
+          ],
+          "context": "vessels.urn:mrn:imo:mmsi:123456789"
+        },
+        {
+          "updates": [
+            {
+              "source": {
+                "label": "",
+                "type": "NMEA2000",
+                "pgn": 129810,
+                "src": "35"
+              },
+              "timestamp": "2026-01-01T00:00:00.000Z",
+              "values": [
+                {
+                  "path": "design.length",
+                  "value": {
+                    "overall": 12
+                  }
+                },
+                {
+                  "path": "design.aisShipType",
+                  "value": {
+                    "id": 36,
+                    "name": "Sailing"
+                  }
+                },
+                {
+                  "path": "design.beam",
+                  "value": 4
+                },
+                {
+                  "path": "",
+                  "value": {
+                    "communication": {
+                      "callsignVhf": "LAB123"
+                    }
+                  }
+                },
+                {
+                  "path": "sensors.ais.fromBow",
+                  "value": 8
+                },
+                {
+                  "path": "sensors.ais.fromCenter",
+                  "value": 1
+                },
+                {
+                  "path": "",
+                  "value": {
+                    "mmsi": "123456789"
+                  }
+                }
+              ]
+            }
+          ],
+          "context": "vessels.urn:mrn:imo:mmsi:123456789"
+        },
+        {
+          "updates": [
+            {
+              "source": {
+                "label": "",
+                "type": "NMEA2000",
+                "pgn": 129038,
+                "src": "35"
+              },
+              "timestamp": "2026-01-01T00:00:00.000Z",
+              "values": [
+                {
+                  "path": "navigation.speedOverGround",
+                  "value": 5
+                },
+                {
+                  "path": "navigation.courseOverGroundTrue",
+                  "value": 1
+                },
+                {
+                  "path": "navigation.rateOfTurn",
+                  "value": 0
+                },
+                {
+                  "path": "navigation.headingTrue",
+                  "value": 0.5
+                },
+                {
+                  "path": "navigation.state",
+                  "value": "motoring"
+                },
+                {
+                  "path": "",
+                  "value": {
+                    "mmsi": "123456789"
+                  }
+                },
+                {
+                  "path": "sensors.ais.class",
+                  "value": "A"
+                }
+              ]
+            }
+          ],
+          "context": "vessels.urn:mrn:imo:mmsi:123456789"
+        },
+        {
+          "updates": [
+            {
+              "source": {
+                "label": "",
+                "type": "NMEA2000",
+                "pgn": 129038,
+                "src": "35"
+              },
+              "timestamp": "2026-01-01T00:00:00.000Z",
+              "values": [
+                {
+                  "path": "navigation.speedOverGround",
+                  "value": 5
+                },
+                {
+                  "path": "navigation.courseOverGroundTrue",
+                  "value": 1
+                },
+                {
+                  "path": "navigation.rateOfTurn",
+                  "value": 0
+                },
+                {
+                  "path": "navigation.headingTrue",
+                  "value": 0.5
+                },
+                {
+                  "path": "navigation.state",
+                  "value": "motoring"
+                },
+                {
+                  "path": "",
+                  "value": {
+                    "mmsi": "123456789"
+                  }
+                },
+                {
+                  "path": "sensors.ais.class",
+                  "value": "A"
+                }
+              ]
+            }
+          ],
+          "context": "vessels.urn:mrn:imo:mmsi:123456789"
+        },
+        {
+          "updates": [
+            {
+              "source": {
+                "label": "",
+                "type": "NMEA2000",
+                "pgn": 129038,
+                "src": "35"
+              },
+              "timestamp": "2026-01-01T00:00:00.000Z",
+              "values": [
+                {
+                  "path": "navigation.speedOverGround",
+                  "value": 5
+                },
+                {
+                  "path": "navigation.courseOverGroundTrue",
+                  "value": 1
+                },
+                {
+                  "path": "navigation.position",
+                  "value": {
+                    "longitude": -2,
+                    "latitude": 1
+                  }
+                },
+                {
+                  "path": "navigation.rateOfTurn",
+                  "value": 0
+                },
+                {
+                  "path": "navigation.headingTrue",
+                  "value": 0.5
+                },
+                {
+                  "path": "navigation.state",
+                  "value": "motoring"
+                },
+                {
+                  "path": "",
+                  "value": {
+                    "mmsi": "234567890"
+                  }
+                },
+                {
+                  "path": "sensors.ais.class",
+                  "value": "A"
+                }
+              ]
+            }
+          ],
+          "context": "vessels.urn:mrn:imo:mmsi:234567890"
+        },
+        {
+          "updates": [
+            {
+              "source": {
+                "label": "",
+                "type": "NMEA2000",
+                "pgn": 129038,
+                "src": "35"
+              },
+              "timestamp": "2026-01-01T00:00:00.000Z",
+              "values": [
+                {
+                  "path": "navigation.speedOverGround",
+                  "value": 5
+                },
+                {
+                  "path": "navigation.courseOverGroundTrue",
+                  "value": 1
+                },
+                {
+                  "path": "navigation.position",
+                  "value": {
+                    "longitude": -2,
+                    "latitude": 1
+                  }
+                },
+                {
+                  "path": "navigation.rateOfTurn",
+                  "value": 0
+                },
+                {
+                  "path": "navigation.headingTrue",
+                  "value": 0.5
+                },
+                {
+                  "path": "navigation.state",
+                  "value": "motoring"
+                },
+                {
+                  "path": "",
+                  "value": {
+                    "mmsi": "123456789"
+                  }
+                },
+                {
+                  "path": "sensors.ais.class",
+                  "value": "A"
+                }
+              ]
+            }
+          ],
+          "context": "vessels.urn:mrn:imo:mmsi:123456789"
+        },
+        {
+          "updates": [
+            {
+              "source": {
+                "label": "",
+                "type": "NMEA2000",
+                "pgn": 129809,
+                "src": "35"
+              },
+              "timestamp": "2026-01-01T00:00:00.000Z",
+              "values": [
+                {
+                  "path": "sensors.ais.class",
+                  "value": "B"
+                },
+                {
+                  "path": "",
+                  "value": {
+                    "name": "LAB TARGET"
+                  }
+                },
+                {
+                  "path": "",
+                  "value": {
+                    "mmsi": "123456789"
+                  }
+                }
+              ]
+            }
+          ],
+          "context": "vessels.urn:mrn:imo:mmsi:123456789"
+        }
+      ],
+      "sentences": [
+        "!AIVDM,1,1,,A,31mg=5@01QOnn400TWh2>Psp0000,0*79",
+        "!AIVDM,1,1,,A,B1mg=5@0HOueQ0099t0S`>v00000,0*6E",
+        "!AIVDM,1,1,,A,H1mg=5@h4:1@58LE@0000000000,2*4C",
+        "!AIVDM,1,1,,A,H1mg=5DT0000000<12ijk0104310,0*1D",
+        "!AIVDM,1,1,,A,31mg=5@01QOnn400TWh2>Psp0000,0*79",
+        "!AIVDM,1,1,,A,B1mg=5@0HOueQ0099t0S`>v00000,0*6E",
+        "!AIVDM,1,1,,A,H1mg=5@h4:1@58LE@0000000000,2*4C",
+        "!AIVDM,1,1,,A,H1mg=5DT0000000<12ijk0104310,0*1D",
+        "!AIVDM,1,1,,A,31mg=5@01Q000000TWh2>Psp0000,0*02",
+        "!AIVDM,1,1,,A,31mg=5@01Q<tSF0l4Q@2>Psp0000,0*4D",
+        "!AIVDM,1,1,,A,33OdplP01QOnn400TWh2>Psp0000,0*5E",
+        null,
+        "!AIVDM,1,1,,A,H1mg=5@h4:1@58LE@0000000000,2*4C"
+      ],
+      "checks": [
+        "MMSI-context",
+        "schema",
+        "source",
+        "static-not-position",
+        "self-filter",
+        "unsupported-129040",
+        "plugin-stop-restart"
+      ]
+    },
+    {
+      "deltas": [
+        {
+          "updates": [
+            {
+              "source": {
+                "label": "",
+                "type": "NMEA2000",
+                "pgn": 129038,
+                "src": "35"
+              },
+              "timestamp": "2026-01-01T00:00:00.000Z",
+              "values": [
+                {
+                  "path": "navigation.speedOverGround",
+                  "value": 5
+                },
+                {
+                  "path": "navigation.courseOverGroundTrue",
+                  "value": 1
+                },
+                {
+                  "path": "navigation.position",
+                  "value": {
+                    "longitude": -2,
+                    "latitude": 1
+                  }
+                },
+                {
+                  "path": "navigation.rateOfTurn",
+                  "value": 0
+                },
+                {
+                  "path": "navigation.headingTrue",
+                  "value": 0.5
+                },
+                {
+                  "path": "navigation.state",
+                  "value": "motoring"
+                },
+                {
+                  "path": "",
+                  "value": {
+                    "mmsi": "123456789"
+                  }
+                },
+                {
+                  "path": "sensors.ais.class",
+                  "value": "A"
+                }
+              ]
+            }
+          ],
+          "context": "vessels.urn:mrn:imo:mmsi:123456789"
+        },
+        {
+          "updates": [
+            {
+              "source": {
+                "label": "",
+                "type": "NMEA2000",
+                "pgn": 129039,
+                "src": "35"
+              },
+              "timestamp": "2026-01-01T00:00:00.000Z",
+              "values": [
+                {
+                  "path": "navigation.speedOverGround",
+                  "value": 5
+                },
+                {
+                  "path": "navigation.courseOverGroundTrue",
+                  "value": 1
+                },
+                {
+                  "path": "navigation.position",
+                  "value": {
+                    "longitude": -2,
+                    "latitude": 1
+                  }
+                },
+                {
+                  "path": "navigation.headingTrue",
+                  "value": 0.5
+                },
+                {
+                  "path": "",
+                  "value": {
+                    "mmsi": "123456789"
+                  }
+                },
+                {
+                  "path": "sensors.ais.class",
+                  "value": "B"
+                }
+              ]
+            }
+          ],
+          "context": "vessels.urn:mrn:imo:mmsi:123456789"
+        },
+        {
+          "updates": [
+            {
+              "source": {
+                "label": "",
+                "type": "NMEA2000",
+                "pgn": 129809,
+                "src": "35"
+              },
+              "timestamp": "2026-01-01T00:00:00.000Z",
+              "values": [
+                {
+                  "path": "sensors.ais.class",
+                  "value": "B"
+                },
+                {
+                  "path": "",
+                  "value": {
+                    "name": "LAB TARGET"
+                  }
+                },
+                {
+                  "path": "",
+                  "value": {
+                    "mmsi": "123456789"
+                  }
+                }
+              ]
+            }
+          ],
+          "context": "vessels.urn:mrn:imo:mmsi:123456789"
+        },
+        {
+          "updates": [
+            {
+              "source": {
+                "label": "",
+                "type": "NMEA2000",
+                "pgn": 129810,
+                "src": "35"
+              },
+              "timestamp": "2026-01-01T00:00:00.000Z",
+              "values": [
+                {
+                  "path": "design.length",
+                  "value": {
+                    "overall": 12
+                  }
+                },
+                {
+                  "path": "design.aisShipType",
+                  "value": {
+                    "id": 36,
+                    "name": "Sailing"
+                  }
+                },
+                {
+                  "path": "design.beam",
+                  "value": 4
+                },
+                {
+                  "path": "",
+                  "value": {
+                    "communication": {
+                      "callsignVhf": "LAB123"
+                    }
+                  }
+                },
+                {
+                  "path": "sensors.ais.fromBow",
+                  "value": 8
+                },
+                {
+                  "path": "sensors.ais.fromCenter",
+                  "value": 1
+                },
+                {
+                  "path": "",
+                  "value": {
+                    "mmsi": "123456789"
+                  }
+                }
+              ]
+            }
+          ],
+          "context": "vessels.urn:mrn:imo:mmsi:123456789"
+        },
+        {
+          "updates": [
+            {
+              "source": {
+                "label": "",
+                "type": "NMEA2000",
+                "pgn": 129038,
+                "src": "35"
+              },
+              "timestamp": "2026-01-01T00:00:00.000Z",
+              "values": [
+                {
+                  "path": "navigation.speedOverGround",
+                  "value": 5
+                },
+                {
+                  "path": "navigation.courseOverGroundTrue",
+                  "value": 1
+                },
+                {
+                  "path": "navigation.position",
+                  "value": {
+                    "longitude": -2,
+                    "latitude": 1
+                  }
+                },
+                {
+                  "path": "navigation.rateOfTurn",
+                  "value": 0
+                },
+                {
+                  "path": "navigation.headingTrue",
+                  "value": 0.5
+                },
+                {
+                  "path": "navigation.state",
+                  "value": "motoring"
+                },
+                {
+                  "path": "",
+                  "value": {
+                    "mmsi": "123456789"
+                  }
+                },
+                {
+                  "path": "sensors.ais.class",
+                  "value": "A"
+                }
+              ]
+            }
+          ],
+          "context": "vessels.urn:mrn:imo:mmsi:123456789"
+        },
+        {
+          "updates": [
+            {
+              "source": {
+                "label": "",
+                "type": "NMEA2000",
+                "pgn": 129039,
+                "src": "35"
+              },
+              "timestamp": "2026-01-01T00:00:00.000Z",
+              "values": [
+                {
+                  "path": "navigation.speedOverGround",
+                  "value": 5
+                },
+                {
+                  "path": "navigation.courseOverGroundTrue",
+                  "value": 1
+                },
+                {
+                  "path": "navigation.position",
+                  "value": {
+                    "longitude": -2,
+                    "latitude": 1
+                  }
+                },
+                {
+                  "path": "navigation.headingTrue",
+                  "value": 0.5
+                },
+                {
+                  "path": "",
+                  "value": {
+                    "mmsi": "123456789"
+                  }
+                },
+                {
+                  "path": "sensors.ais.class",
+                  "value": "B"
+                }
+              ]
+            }
+          ],
+          "context": "vessels.urn:mrn:imo:mmsi:123456789"
+        },
+        {
+          "updates": [
+            {
+              "source": {
+                "label": "",
+                "type": "NMEA2000",
+                "pgn": 129809,
+                "src": "35"
+              },
+              "timestamp": "2026-01-01T00:00:00.000Z",
+              "values": [
+                {
+                  "path": "sensors.ais.class",
+                  "value": "B"
+                },
+                {
+                  "path": "",
+                  "value": {
+                    "name": "LAB TARGET"
+                  }
+                },
+                {
+                  "path": "",
+                  "value": {
+                    "mmsi": "123456789"
+                  }
+                }
+              ]
+            }
+          ],
+          "context": "vessels.urn:mrn:imo:mmsi:123456789"
+        },
+        {
+          "updates": [
+            {
+              "source": {
+                "label": "",
+                "type": "NMEA2000",
+                "pgn": 129810,
+                "src": "35"
+              },
+              "timestamp": "2026-01-01T00:00:00.000Z",
+              "values": [
+                {
+                  "path": "design.length",
+                  "value": {
+                    "overall": 12
+                  }
+                },
+                {
+                  "path": "design.aisShipType",
+                  "value": {
+                    "id": 36,
+                    "name": "Sailing"
+                  }
+                },
+                {
+                  "path": "design.beam",
+                  "value": 4
+                },
+                {
+                  "path": "",
+                  "value": {
+                    "communication": {
+                      "callsignVhf": "LAB123"
+                    }
+                  }
+                },
+                {
+                  "path": "sensors.ais.fromBow",
+                  "value": 8
+                },
+                {
+                  "path": "sensors.ais.fromCenter",
+                  "value": 1
+                },
+                {
+                  "path": "",
+                  "value": {
+                    "mmsi": "123456789"
+                  }
+                }
+              ]
+            }
+          ],
+          "context": "vessels.urn:mrn:imo:mmsi:123456789"
+        },
+        {
+          "updates": [
+            {
+              "source": {
+                "label": "",
+                "type": "NMEA2000",
+                "pgn": 129038,
+                "src": "35"
+              },
+              "timestamp": "2026-01-01T00:00:00.000Z",
+              "values": [
+                {
+                  "path": "navigation.speedOverGround",
+                  "value": 5
+                },
+                {
+                  "path": "navigation.courseOverGroundTrue",
+                  "value": 1
+                },
+                {
+                  "path": "navigation.rateOfTurn",
+                  "value": 0
+                },
+                {
+                  "path": "navigation.headingTrue",
+                  "value": 0.5
+                },
+                {
+                  "path": "navigation.state",
+                  "value": "motoring"
+                },
+                {
+                  "path": "",
+                  "value": {
+                    "mmsi": "123456789"
+                  }
+                },
+                {
+                  "path": "sensors.ais.class",
+                  "value": "A"
+                }
+              ]
+            }
+          ],
+          "context": "vessels.urn:mrn:imo:mmsi:123456789"
+        },
+        {
+          "updates": [
+            {
+              "source": {
+                "label": "",
+                "type": "NMEA2000",
+                "pgn": 129038,
+                "src": "35"
+              },
+              "timestamp": "2026-01-01T00:00:00.000Z",
+              "values": [
+                {
+                  "path": "navigation.speedOverGround",
+                  "value": 5
+                },
+                {
+                  "path": "navigation.courseOverGroundTrue",
+                  "value": 1
+                },
+                {
+                  "path": "navigation.rateOfTurn",
+                  "value": 0
+                },
+                {
+                  "path": "navigation.headingTrue",
+                  "value": 0.5
+                },
+                {
+                  "path": "navigation.state",
+                  "value": "motoring"
+                },
+                {
+                  "path": "",
+                  "value": {
+                    "mmsi": "123456789"
+                  }
+                },
+                {
+                  "path": "sensors.ais.class",
+                  "value": "A"
+                }
+              ]
+            }
+          ],
+          "context": "vessels.urn:mrn:imo:mmsi:123456789"
+        },
+        {
+          "updates": [
+            {
+              "source": {
+                "label": "",
+                "type": "NMEA2000",
+                "pgn": 129038,
+                "src": "35"
+              },
+              "timestamp": "2026-01-01T00:00:00.000Z",
+              "values": [
+                {
+                  "path": "navigation.speedOverGround",
+                  "value": 5
+                },
+                {
+                  "path": "navigation.courseOverGroundTrue",
+                  "value": 1
+                },
+                {
+                  "path": "navigation.position",
+                  "value": {
+                    "longitude": -2,
+                    "latitude": 1
+                  }
+                },
+                {
+                  "path": "navigation.rateOfTurn",
+                  "value": 0
+                },
+                {
+                  "path": "navigation.headingTrue",
+                  "value": 0.5
+                },
+                {
+                  "path": "navigation.state",
+                  "value": "motoring"
+                },
+                {
+                  "path": "",
+                  "value": {
+                    "mmsi": "234567890"
+                  }
+                },
+                {
+                  "path": "sensors.ais.class",
+                  "value": "A"
+                }
+              ]
+            }
+          ],
+          "context": "vessels.urn:mrn:imo:mmsi:234567890"
+        },
+        {
+          "updates": [
+            {
+              "source": {
+                "label": "",
+                "type": "NMEA2000",
+                "pgn": 129038,
+                "src": "35"
+              },
+              "timestamp": "2026-01-01T00:00:00.000Z",
+              "values": [
+                {
+                  "path": "navigation.speedOverGround",
+                  "value": 5
+                },
+                {
+                  "path": "navigation.courseOverGroundTrue",
+                  "value": 1
+                },
+                {
+                  "path": "navigation.position",
+                  "value": {
+                    "longitude": -2,
+                    "latitude": 1
+                  }
+                },
+                {
+                  "path": "navigation.rateOfTurn",
+                  "value": 0
+                },
+                {
+                  "path": "navigation.headingTrue",
+                  "value": 0.5
+                },
+                {
+                  "path": "navigation.state",
+                  "value": "motoring"
+                },
+                {
+                  "path": "",
+                  "value": {
+                    "mmsi": "123456789"
+                  }
+                },
+                {
+                  "path": "sensors.ais.class",
+                  "value": "A"
+                }
+              ]
+            }
+          ],
+          "context": "vessels.urn:mrn:imo:mmsi:123456789"
+        },
+        {
+          "updates": [
+            {
+              "source": {
+                "label": "",
+                "type": "NMEA2000",
+                "pgn": 129809,
+                "src": "35"
+              },
+              "timestamp": "2026-01-01T00:00:00.000Z",
+              "values": [
+                {
+                  "path": "sensors.ais.class",
+                  "value": "B"
+                },
+                {
+                  "path": "",
+                  "value": {
+                    "name": "LAB TARGET"
+                  }
+                },
+                {
+                  "path": "",
+                  "value": {
+                    "mmsi": "123456789"
+                  }
+                }
+              ]
+            }
+          ],
+          "context": "vessels.urn:mrn:imo:mmsi:123456789"
+        }
+      ],
+      "sentences": [
+        "!AIVDM,1,1,,A,31mg=5@01QOnn400TWh2>Psp0000,0*79",
+        "!AIVDM,1,1,,A,B1mg=5@0HOueQ0099t0S`>v00000,0*6E",
+        "!AIVDM,1,1,,A,H1mg=5@h4:1@58LE@0000000000,2*4C",
+        "!AIVDM,1,1,,A,H1mg=5DT0000000<12ijk0104310,0*1D",
+        "!AIVDM,1,1,,A,31mg=5@01QOnn400TWh2>Psp0000,0*79",
+        "!AIVDM,1,1,,A,B1mg=5@0HOueQ0099t0S`>v00000,0*6E",
+        "!AIVDM,1,1,,A,H1mg=5@h4:1@58LE@0000000000,2*4C",
+        "!AIVDM,1,1,,A,H1mg=5DT0000000<12ijk0104310,0*1D",
+        "!AIVDM,1,1,,A,31mg=5@01Q000000TWh2>Psp0000,0*02",
+        "!AIVDM,1,1,,A,31mg=5@01Q<tSF0l4Q@2>Psp0000,0*4D",
+        "!AIVDM,1,1,,A,33OdplP01QOnn400TWh2>Psp0000,0*5E",
+        null,
+        "!AIVDM,1,1,,A,H1mg=5@h4:1@58LE@0000000000,2*4C"
+      ],
+      "checks": [
+        "MMSI-context",
+        "schema",
+        "source",
+        "static-not-position",
+        "self-filter",
+        "unsupported-129040",
+        "plugin-stop-restart"
+      ]
+    },
+    {
+      "deltas": [
+        {
+          "updates": [
+            {
+              "source": {
+                "label": "",
+                "type": "NMEA2000",
+                "pgn": 129038,
+                "src": "35"
+              },
+              "timestamp": "2026-01-01T00:00:00.000Z",
+              "values": [
+                {
+                  "path": "navigation.speedOverGround",
+                  "value": 5
+                },
+                {
+                  "path": "navigation.courseOverGroundTrue",
+                  "value": 1
+                },
+                {
+                  "path": "navigation.position",
+                  "value": {
+                    "longitude": -2,
+                    "latitude": 1
+                  }
+                },
+                {
+                  "path": "navigation.rateOfTurn",
+                  "value": 0
+                },
+                {
+                  "path": "navigation.headingTrue",
+                  "value": 0.5
+                },
+                {
+                  "path": "navigation.state",
+                  "value": "motoring"
+                },
+                {
+                  "path": "",
+                  "value": {
+                    "mmsi": "123456789"
+                  }
+                },
+                {
+                  "path": "sensors.ais.class",
+                  "value": "A"
+                }
+              ]
+            }
+          ],
+          "context": "vessels.urn:mrn:imo:mmsi:123456789"
+        },
+        {
+          "updates": [
+            {
+              "source": {
+                "label": "",
+                "type": "NMEA2000",
+                "pgn": 129039,
+                "src": "35"
+              },
+              "timestamp": "2026-01-01T00:00:00.000Z",
+              "values": [
+                {
+                  "path": "navigation.speedOverGround",
+                  "value": 5
+                },
+                {
+                  "path": "navigation.courseOverGroundTrue",
+                  "value": 1
+                },
+                {
+                  "path": "navigation.position",
+                  "value": {
+                    "longitude": -2,
+                    "latitude": 1
+                  }
+                },
+                {
+                  "path": "navigation.headingTrue",
+                  "value": 0.5
+                },
+                {
+                  "path": "",
+                  "value": {
+                    "mmsi": "123456789"
+                  }
+                },
+                {
+                  "path": "sensors.ais.class",
+                  "value": "B"
+                }
+              ]
+            }
+          ],
+          "context": "vessels.urn:mrn:imo:mmsi:123456789"
+        },
+        {
+          "updates": [
+            {
+              "source": {
+                "label": "",
+                "type": "NMEA2000",
+                "pgn": 129809,
+                "src": "35"
+              },
+              "timestamp": "2026-01-01T00:00:00.000Z",
+              "values": [
+                {
+                  "path": "sensors.ais.class",
+                  "value": "B"
+                },
+                {
+                  "path": "",
+                  "value": {
+                    "name": "LAB TARGET"
+                  }
+                },
+                {
+                  "path": "",
+                  "value": {
+                    "mmsi": "123456789"
+                  }
+                }
+              ]
+            }
+          ],
+          "context": "vessels.urn:mrn:imo:mmsi:123456789"
+        },
+        {
+          "updates": [
+            {
+              "source": {
+                "label": "",
+                "type": "NMEA2000",
+                "pgn": 129810,
+                "src": "35"
+              },
+              "timestamp": "2026-01-01T00:00:00.000Z",
+              "values": [
+                {
+                  "path": "design.length",
+                  "value": {
+                    "overall": 12
+                  }
+                },
+                {
+                  "path": "design.aisShipType",
+                  "value": {
+                    "id": 36,
+                    "name": "Sailing"
+                  }
+                },
+                {
+                  "path": "design.beam",
+                  "value": 4
+                },
+                {
+                  "path": "",
+                  "value": {
+                    "communication": {
+                      "callsignVhf": "LAB123"
+                    }
+                  }
+                },
+                {
+                  "path": "sensors.ais.fromBow",
+                  "value": 8
+                },
+                {
+                  "path": "sensors.ais.fromCenter",
+                  "value": 1
+                },
+                {
+                  "path": "",
+                  "value": {
+                    "mmsi": "123456789"
+                  }
+                }
+              ]
+            }
+          ],
+          "context": "vessels.urn:mrn:imo:mmsi:123456789"
+        },
+        {
+          "updates": [
+            {
+              "source": {
+                "label": "",
+                "type": "NMEA2000",
+                "pgn": 129038,
+                "src": "35"
+              },
+              "timestamp": "2026-01-01T00:00:00.000Z",
+              "values": [
+                {
+                  "path": "navigation.speedOverGround",
+                  "value": 5
+                },
+                {
+                  "path": "navigation.courseOverGroundTrue",
+                  "value": 1
+                },
+                {
+                  "path": "navigation.position",
+                  "value": {
+                    "longitude": -2,
+                    "latitude": 1
+                  }
+                },
+                {
+                  "path": "navigation.rateOfTurn",
+                  "value": 0
+                },
+                {
+                  "path": "navigation.headingTrue",
+                  "value": 0.5
+                },
+                {
+                  "path": "navigation.state",
+                  "value": "motoring"
+                },
+                {
+                  "path": "",
+                  "value": {
+                    "mmsi": "123456789"
+                  }
+                },
+                {
+                  "path": "sensors.ais.class",
+                  "value": "A"
+                }
+              ]
+            }
+          ],
+          "context": "vessels.urn:mrn:imo:mmsi:123456789"
+        },
+        {
+          "updates": [
+            {
+              "source": {
+                "label": "",
+                "type": "NMEA2000",
+                "pgn": 129039,
+                "src": "35"
+              },
+              "timestamp": "2026-01-01T00:00:00.000Z",
+              "values": [
+                {
+                  "path": "navigation.speedOverGround",
+                  "value": 5
+                },
+                {
+                  "path": "navigation.courseOverGroundTrue",
+                  "value": 1
+                },
+                {
+                  "path": "navigation.position",
+                  "value": {
+                    "longitude": -2,
+                    "latitude": 1
+                  }
+                },
+                {
+                  "path": "navigation.headingTrue",
+                  "value": 0.5
+                },
+                {
+                  "path": "",
+                  "value": {
+                    "mmsi": "123456789"
+                  }
+                },
+                {
+                  "path": "sensors.ais.class",
+                  "value": "B"
+                }
+              ]
+            }
+          ],
+          "context": "vessels.urn:mrn:imo:mmsi:123456789"
+        },
+        {
+          "updates": [
+            {
+              "source": {
+                "label": "",
+                "type": "NMEA2000",
+                "pgn": 129809,
+                "src": "35"
+              },
+              "timestamp": "2026-01-01T00:00:00.000Z",
+              "values": [
+                {
+                  "path": "sensors.ais.class",
+                  "value": "B"
+                },
+                {
+                  "path": "",
+                  "value": {
+                    "name": "LAB TARGET"
+                  }
+                },
+                {
+                  "path": "",
+                  "value": {
+                    "mmsi": "123456789"
+                  }
+                }
+              ]
+            }
+          ],
+          "context": "vessels.urn:mrn:imo:mmsi:123456789"
+        },
+        {
+          "updates": [
+            {
+              "source": {
+                "label": "",
+                "type": "NMEA2000",
+                "pgn": 129810,
+                "src": "35"
+              },
+              "timestamp": "2026-01-01T00:00:00.000Z",
+              "values": [
+                {
+                  "path": "design.length",
+                  "value": {
+                    "overall": 12
+                  }
+                },
+                {
+                  "path": "design.aisShipType",
+                  "value": {
+                    "id": 36,
+                    "name": "Sailing"
+                  }
+                },
+                {
+                  "path": "design.beam",
+                  "value": 4
+                },
+                {
+                  "path": "",
+                  "value": {
+                    "communication": {
+                      "callsignVhf": "LAB123"
+                    }
+                  }
+                },
+                {
+                  "path": "sensors.ais.fromBow",
+                  "value": 8
+                },
+                {
+                  "path": "sensors.ais.fromCenter",
+                  "value": 1
+                },
+                {
+                  "path": "",
+                  "value": {
+                    "mmsi": "123456789"
+                  }
+                }
+              ]
+            }
+          ],
+          "context": "vessels.urn:mrn:imo:mmsi:123456789"
+        },
+        {
+          "updates": [
+            {
+              "source": {
+                "label": "",
+                "type": "NMEA2000",
+                "pgn": 129038,
+                "src": "35"
+              },
+              "timestamp": "2026-01-01T00:00:00.000Z",
+              "values": [
+                {
+                  "path": "navigation.speedOverGround",
+                  "value": 5
+                },
+                {
+                  "path": "navigation.courseOverGroundTrue",
+                  "value": 1
+                },
+                {
+                  "path": "navigation.rateOfTurn",
+                  "value": 0
+                },
+                {
+                  "path": "navigation.headingTrue",
+                  "value": 0.5
+                },
+                {
+                  "path": "navigation.state",
+                  "value": "motoring"
+                },
+                {
+                  "path": "",
+                  "value": {
+                    "mmsi": "123456789"
+                  }
+                },
+                {
+                  "path": "sensors.ais.class",
+                  "value": "A"
+                }
+              ]
+            }
+          ],
+          "context": "vessels.urn:mrn:imo:mmsi:123456789"
+        },
+        {
+          "updates": [
+            {
+              "source": {
+                "label": "",
+                "type": "NMEA2000",
+                "pgn": 129038,
+                "src": "35"
+              },
+              "timestamp": "2026-01-01T00:00:00.000Z",
+              "values": [
+                {
+                  "path": "navigation.speedOverGround",
+                  "value": 5
+                },
+                {
+                  "path": "navigation.courseOverGroundTrue",
+                  "value": 1
+                },
+                {
+                  "path": "navigation.rateOfTurn",
+                  "value": 0
+                },
+                {
+                  "path": "navigation.headingTrue",
+                  "value": 0.5
+                },
+                {
+                  "path": "navigation.state",
+                  "value": "motoring"
+                },
+                {
+                  "path": "",
+                  "value": {
+                    "mmsi": "123456789"
+                  }
+                },
+                {
+                  "path": "sensors.ais.class",
+                  "value": "A"
+                }
+              ]
+            }
+          ],
+          "context": "vessels.urn:mrn:imo:mmsi:123456789"
+        },
+        {
+          "updates": [
+            {
+              "source": {
+                "label": "",
+                "type": "NMEA2000",
+                "pgn": 129038,
+                "src": "35"
+              },
+              "timestamp": "2026-01-01T00:00:00.000Z",
+              "values": [
+                {
+                  "path": "navigation.speedOverGround",
+                  "value": 5
+                },
+                {
+                  "path": "navigation.courseOverGroundTrue",
+                  "value": 1
+                },
+                {
+                  "path": "navigation.position",
+                  "value": {
+                    "longitude": -2,
+                    "latitude": 1
+                  }
+                },
+                {
+                  "path": "navigation.rateOfTurn",
+                  "value": 0
+                },
+                {
+                  "path": "navigation.headingTrue",
+                  "value": 0.5
+                },
+                {
+                  "path": "navigation.state",
+                  "value": "motoring"
+                },
+                {
+                  "path": "",
+                  "value": {
+                    "mmsi": "234567890"
+                  }
+                },
+                {
+                  "path": "sensors.ais.class",
+                  "value": "A"
+                }
+              ]
+            }
+          ],
+          "context": "vessels.urn:mrn:imo:mmsi:234567890"
+        },
+        {
+          "updates": [
+            {
+              "source": {
+                "label": "",
+                "type": "NMEA2000",
+                "pgn": 129038,
+                "src": "35"
+              },
+              "timestamp": "2026-01-01T00:00:00.000Z",
+              "values": [
+                {
+                  "path": "navigation.speedOverGround",
+                  "value": 5
+                },
+                {
+                  "path": "navigation.courseOverGroundTrue",
+                  "value": 1
+                },
+                {
+                  "path": "navigation.position",
+                  "value": {
+                    "longitude": -2,
+                    "latitude": 1
+                  }
+                },
+                {
+                  "path": "navigation.rateOfTurn",
+                  "value": 0
+                },
+                {
+                  "path": "navigation.headingTrue",
+                  "value": 0.5
+                },
+                {
+                  "path": "navigation.state",
+                  "value": "motoring"
+                },
+                {
+                  "path": "",
+                  "value": {
+                    "mmsi": "123456789"
+                  }
+                },
+                {
+                  "path": "sensors.ais.class",
+                  "value": "A"
+                }
+              ]
+            }
+          ],
+          "context": "vessels.urn:mrn:imo:mmsi:123456789"
+        },
+        {
+          "updates": [
+            {
+              "source": {
+                "label": "",
+                "type": "NMEA2000",
+                "pgn": 129809,
+                "src": "35"
+              },
+              "timestamp": "2026-01-01T00:00:00.000Z",
+              "values": [
+                {
+                  "path": "sensors.ais.class",
+                  "value": "B"
+                },
+                {
+                  "path": "",
+                  "value": {
+                    "name": "LAB TARGET"
+                  }
+                },
+                {
+                  "path": "",
+                  "value": {
+                    "mmsi": "123456789"
+                  }
+                }
+              ]
+            }
+          ],
+          "context": "vessels.urn:mrn:imo:mmsi:123456789"
+        }
+      ],
+      "sentences": [
+        "!AIVDM,1,1,,A,31mg=5@01QOnn400TWh2>Psp0000,0*79",
+        "!AIVDM,1,1,,A,B1mg=5@0HOueQ0099t0S`>v00000,0*6E",
+        "!AIVDM,1,1,,A,H1mg=5@h4:1@58LE@0000000000,2*4C",
+        "!AIVDM,1,1,,A,H1mg=5DT0000000<12ijk0104310,0*1D",
+        "!AIVDM,1,1,,A,31mg=5@01QOnn400TWh2>Psp0000,0*79",
+        "!AIVDM,1,1,,A,B1mg=5@0HOueQ0099t0S`>v00000,0*6E",
+        "!AIVDM,1,1,,A,H1mg=5@h4:1@58LE@0000000000,2*4C",
+        "!AIVDM,1,1,,A,H1mg=5DT0000000<12ijk0104310,0*1D",
+        "!AIVDM,1,1,,A,31mg=5@01Q000000TWh2>Psp0000,0*02",
+        "!AIVDM,1,1,,A,31mg=5@01Q<tSF0l4Q@2>Psp0000,0*4D",
+        "!AIVDM,1,1,,A,33OdplP01QOnn400TWh2>Psp0000,0*5E",
+        null,
+        "!AIVDM,1,1,,A,H1mg=5@h4:1@58LE@0000000000,2*4C"
+      ],
+      "checks": [
+        "MMSI-context",
+        "schema",
+        "source",
+        "static-not-position",
+        "self-filter",
+        "unsupported-129040",
+        "plugin-stop-restart"
+      ]
+    }
+  ]
+}

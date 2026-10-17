@@ -88,3 +88,8 @@ The [claim ledger](../research/runs/fortification.md) and
 conflicts, exclusions and scoped findings. Use these alongside the original register;
 the executed package/source versions are in the
 [software evidence](../evidence/fortification-results.md).
+
+## AIS-over-N2K extension
+
+The [AIS research report](../research/runs/ais-n2k.md) adds primary device/software
+sources and version-pinned conversion evidence, including observed limitations.

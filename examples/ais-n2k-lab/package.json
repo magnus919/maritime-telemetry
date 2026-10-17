@@ -1,0 +1,11 @@
+{
+  "name": "maritime-ais-n2k-lab",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Offline synthetic AIS conversion probes; no network listeners or vessel IO",
+  "dependencies": {
+    "@signalk/n2k-signalk": "4.7.0",
+    "@signalk/signalk-schema": "1.8.2",
+    "signalk-n2kais-to-nmea0183": "2.0.3"
+  }
+}
