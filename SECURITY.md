@@ -8,7 +8,8 @@ include that revision and whether you can reproduce it on current `main`.
 
 ## Report a vulnerability privately
 
-Use [GitHub's private vulnerability reporting form](https://github.com/magnus919/maritime-telemetry/security/advisories/new),
+Email [magnus919@pm.me](mailto:magnus919@pm.me) or use
+[GitHub's private vulnerability reporting form](https://github.com/magnus919/maritime-telemetry/security/advisories/new),
 or open the repository's **Security → Advisories → Report a vulnerability** page.
 Do not put exploit details, credentials or private captures in a public issue or PR.
 For help using the form, see [GitHub's reporting instructions](https://docs.github.com/en/code-security/how-tos/report-and-fix-vulnerabilities/report-privately).
@@ -25,9 +26,8 @@ MMSIs, serial numbers and secrets from attachments. Do not test against someone
 else's boat, radio, server or account. An isolated software reproduction is useful;
 a live-vessel demonstration is not required.
 
-If the private form becomes unavailable, open a public issue asking for a private
-security contact **without vulnerability details**. This fallback is for arranging
-contact, not disclosure.
+If the private form becomes unavailable, email [magnus919@pm.me](mailto:magnus919@pm.me)
+instead. Keep vulnerability details out of public issues.
 
 ## What belongs here
 
