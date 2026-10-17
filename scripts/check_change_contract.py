@@ -9,7 +9,7 @@ from pathlib import PurePosixPath
 import subprocess
 
 
-CODE_SUFFIXES = {'.py', '.c', '.cpp', '.cxx', '.h', '.hpp', '.js', '.cjs', '.mjs', '.ts'}
+CODE_SUFFIXES = {'.py', '.c', '.cpp', '.cxx', '.h', '.hpp', '.js', '.cjs', '.mjs', '.ts', '.sh', '.bash', '.rb'}
 
 
 def classify(path):
@@ -20,7 +20,7 @@ def classify(path):
     )
     code = (path.startswith(('scripts/', 'examples/')) and (
         p.suffix in CODE_SUFFIXES or p.name in {'package.json', 'package-lock.json', 'platformio.ini'}
-    )) or path.startswith('.github/workflows/') or path in {'requirements-dev.txt', '.coveragerc'}
+    )) or path.startswith(('.github/workflows/', '.github/policies/')) or path in {'.github/dependabot.yml', 'requirements-dev.txt', '.coveragerc'}
     return code, docs, tests
 
 

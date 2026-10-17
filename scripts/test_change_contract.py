@@ -20,7 +20,8 @@ class ChangeContractTests(unittest.TestCase):
 
     def test_dependency_and_ci_changes_are_code(self):
         for path in ('examples/signalk-lab/package-lock.json', '.github/workflows/validate.yml',
-                     'examples/esp32-n2k/platformio.ini', 'requirements-dev.txt', '.coveragerc'):
+                     'examples/esp32-n2k/platformio.ini', '.github/policies/main-protection.json',
+                     '.github/dependabot.yml', 'scripts/check.sh', 'requirements-dev.txt', '.coveragerc'):
             self.assertFalse(assess([path])['passed'])
             self.assertTrue(assess([path, 'CONTRIBUTING.md', 'scripts/test_change_contract.py'])['passed'])
 
