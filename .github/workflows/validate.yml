@@ -1,17 +1,107 @@
 name: Validate skill
-on: [push, pull_request]
+on:
+  pull_request:
+  push:
+    branches: [main]
+  workflow_dispatch:
 permissions:
   contents: read
+concurrency:
+  group: validate-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
 jobs:
+  change-contract:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v7.0.1
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v7.0.0
+        with:
+          python-version: '3.12'
+      - name: Require documentation and test co-changes
+        if: github.event_name != 'workflow_dispatch'
+        env:
+          BASE_SHA: ${{ github.event.pull_request.base.sha || github.event.before }}
+          HEAD_SHA: ${{ github.event.pull_request.head.sha || github.sha }}
+        run: python scripts/check_change_contract.py --base "$BASE_SHA" --head "$HEAD_SHA"
   offline-validation:
     runs-on: ubuntu-latest
+    timeout-minutes: 10
     strategy:
+      fail-fast: false
       matrix:
         python-version: ['3.10', '3.12', '3.14']
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - uses: actions/checkout@v7.0.1
+      - uses: actions/setup-python@v7.0.0
         with:
           python-version: ${{ matrix.python-version }}
+      - run: python -m pip install -r requirements-dev.txt
       - run: python scripts/validate_skill.py
-      - run: python -m unittest discover -s scripts -p 'test_*.py'
+      - run: python -m coverage run -m unittest discover -s scripts -p 'test_*.py'
+      - run: python -m coverage report
+      - run: python -m coverage xml
+      - uses: actions/upload-artifact@v7.0.2
+        with:
+          name: python-coverage-${{ matrix.python-version }}
+          path: coverage.xml
+          retention-days: 14
+  ais-integration:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v7.0.1
+      - uses: actions/setup-node@v7.1.0
+        with:
+          node-version: '24'
+      - uses: actions/setup-python@v7.0.0
+        with:
+          python-version: '3.12'
+      - run: npm ci --prefix examples/ais-n2k-lab --ignore-scripts --no-audit --no-fund
+      - run: npm audit --prefix examples/ais-n2k-lab --omit=dev --audit-level=moderate
+      - name: Build pinned upstream offline tools
+        run: |
+          git init "$RUNNER_TEMP/nmea2000"
+          git -C "$RUNNER_TEMP/nmea2000" remote add origin https://github.com/ttlappalainen/NMEA2000.git
+          git -C "$RUNNER_TEMP/nmea2000" fetch --depth=1 origin 5b7b9fc3ccc18e30ebfba92da6486cffc6251595
+          git -C "$RUNNER_TEMP/nmea2000" checkout --detach FETCH_HEAD
+          git init "$RUNNER_TEMP/canboat"
+          git -C "$RUNNER_TEMP/canboat" remote add origin https://github.com/canboat/canboat.git
+          git -C "$RUNNER_TEMP/canboat" fetch --depth=1 origin ed1052d80596a4e6eaa56907dfeb215fac61287d
+          git -C "$RUNNER_TEMP/canboat" checkout --detach FETCH_HEAD
+          make -C "$RUNNER_TEMP/canboat/analyzer"
+          make -C "$RUNNER_TEMP/canboat/candump2analyzer"
+          c++ -std=c++11 -I "$RUNNER_TEMP/nmea2000/src" examples/protocol_oracle.cpp "$RUNNER_TEMP/nmea2000"/src/*.cpp -o "$RUNNER_TEMP/protocol-oracle"
+          "$RUNNER_TEMP/protocol-oracle"
+          c++ -std=c++11 -I "$RUNNER_TEMP/nmea2000/src" examples/ais_n2k_oracle.cpp "$RUNNER_TEMP/nmea2000"/src/*.cpp -o "$RUNNER_TEMP/ais-oracle"
+          "$RUNNER_TEMP/ais-oracle" > "$RUNNER_TEMP/ais-library.raw"
+      - name: Verify AIS decoding, mapping and conversion
+        run: |
+          CANBOAT_BIN=$(dirname "$(find "$RUNNER_TEMP/canboat/rel" -type f -name analyzer -print -quit)")
+          test -x "$CANBOAT_BIN/analyzer"
+          python scripts/verify_ais_decode.py --analyzer "$CANBOAT_BIN/analyzer" --converter "$CANBOAT_BIN/candump2analyzer" --library-output "$RUNNER_TEMP/ais-library.raw"
+          "$CANBOAT_BIN/analyzer" -json -si -camel -empty < fixtures/ais-n2k.raw > "$RUNNER_TEMP/ais-decoded.jsonl"
+          node examples/ais-n2k-lab/probe.cjs "$RUNNER_TEMP/ais-decoded.jsonl" > "$RUNNER_TEMP/ais-integration.json"
+          python -m pip install pyais==3.3.1
+          python examples/ais_n2k_0183_probe.py "$RUNNER_TEMP/ais-integration.json"
+  required-ci:
+    name: required-ci
+    if: always()
+    needs: [change-contract, offline-validation, ais-integration]
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Fail unless every required job succeeded
+        env:
+          RESULTS: ${{ toJSON(needs) }}
+        run: |
+          python3 - <<'PY'
+          import json, os
+          results = json.loads(os.environ['RESULTS'])
+          bad = {name: row['result'] for name, row in results.items() if row['result'] != 'success'}
+          if bad:
+              raise SystemExit(f'Required CI did not pass: {bad}')
+          print('All required jobs passed.')
+          PY

@@ -1,0 +1,18 @@
+name: Dependency audit
+on:
+  schedule:
+    - cron: '23 8 * * 1'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  npm-audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v7.0.1
+      - uses: actions/setup-node@v7.1.0
+        with:
+          node-version: '24'
+      - run: npm ci --prefix examples/ais-n2k-lab --ignore-scripts --no-audit --no-fund
+      - run: npm audit --prefix examples/ais-n2k-lab --omit=dev --audit-level=moderate

@@ -22,7 +22,7 @@ records, with clear distinctions between a working prototype and certification.
 | `references/` | Focused guides covering protocols, wiring, calibration, software, controls and verification |
 | `templates/` | Contracts, power budgets, calibration, capture, control and recovery worksheets |
 | `scripts/` | Offline inspector, fault models, engineering calculations and regression tests |
-| `examples/`, `evidence/` | C++ protocol probes, two ESP32 builds, local Signal K lab and recorded results |
+| `examples/`, `evidence/` | C++ protocol probes, two ESP32 builds, AIS mapping lab and scoped historical results |
 | `evals/` | Output-quality scenarios and separate trigger/rubric review examples |
 
 ## Quick Start
@@ -88,3 +88,8 @@ participation follows our [Code of Conduct](CODE_OF_CONDUCT.md). Use the
 bugs, ideas or evidence corrections, and [Security](SECURITY.md) for private
 vulnerability reports. Agent contributors should read [AGENTS.md](AGENTS.md).
 Original repository content is available under the [MIT License](LICENSE).
+
+The former [full-server lab](examples/signalk-lab/README.md) is quarantined while
+upstream dependency advisories remain. The [AIS mapping lab](references/ais-n2k-laboratory.md)
+remains runnable and CI-tested. Code PRs require relevant docs/tests, passing
+integration checks and at least 85% combined Python coverage.

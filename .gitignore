@@ -5,3 +5,7 @@ __pycache__/
 
 node_modules/
 .pio/
+.coverage
+coverage.xml
+coverage.json
+htmlcov/

@@ -1,5 +1,5 @@
 producer,producer_version,interface,consumer,consumer_version,direction,message_or_path,evidence_level,result,evidence,limits
 synthetic-heading,fixture-v1,candump-log,CANboat-C,ed1052d80596a4e6eaa56907dfeb215fac61287d,receive,127250,executed-offline,pass,evidence/fortification-results.md,one nominal SI heading vector
-synthetic-delta,fixture-v1,internal-handleMessage,SignalK-server,2.33.0,receive,environment.water.temperature,executed-loopback,pass,evidence/fortification-results.md,no physical provider or TLS verification
+synthetic-delta,fixture-v1,internal-handleMessage,SignalK-server,2.33.0,receive,environment.water.temperature,historical-loopback,quarantined,evidence/dependency-remediation.md,previous pass only; vulnerable full-server lab removed
 ESP32-synthetic,example-v1,CAN-disabled,commercial-MFD,not-selected,publish,127508,compiled-only,not-assessed,evidence/fortification-results.md,no physical receiver
 Pi-gateway,not-selected,not-selected,OpenCPN,not-selected,receive,source-selection,documented,not-assessed,references/deployment-and-consumers.md,no GUI or Pi test

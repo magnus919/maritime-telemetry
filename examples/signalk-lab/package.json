@@ -1,1 +1,0 @@
-{"name":"maritime-telemetry-signalk-lab","version":"1.0.0","private":true,"description":"Loopback-only synthetic integration lab","dependencies":{"signalk-server":"2.33.0","@signalk/signalk-schema":"1.8.2","ws":"8.18.3"}}

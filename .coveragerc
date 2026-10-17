@@ -1,0 +1,9 @@
+[run]
+branch = True
+source = scripts
+omit = scripts/test_*.py
+
+[report]
+fail_under = 85
+precision = 2
+show_missing = True
