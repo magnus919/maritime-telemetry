@@ -1,0 +1,28 @@
+name: Feature or use case
+description: Suggest a capability, example, template or new area of coverage.
+title: "[Feature] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Tell us about the outcome you need. You do not need an implementation plan.
+        Search existing issues first and avoid sharing private vessel data or credentials.
+  - type: textarea
+    id: problem
+    attributes:
+      label: What are you trying to do?
+      description: Describe the user, device or software workflow and where the current skill falls short.
+    validations:
+      required: true
+  - type: textarea
+    id: outcome
+    attributes:
+      label: What would a useful result look like?
+      description: Give a concrete example or acceptance condition.
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: Relevant devices, versions or sources
+      description: Optional manuals, project links, alternatives or constraints. Identify whether you have equipment available for testing.

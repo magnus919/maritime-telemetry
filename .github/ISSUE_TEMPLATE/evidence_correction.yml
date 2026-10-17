@@ -1,0 +1,23 @@
+name: Evidence or documentation correction
+description: Correct a technical claim, stale reference, missing attribution or unclear explanation.
+title: "[Evidence] "
+body:
+  - type: textarea
+    id: location
+    attributes:
+      label: Where is the problem?
+      description: Link the file or section and identify the claim or wording.
+    validations:
+      required: true
+  - type: textarea
+    id: correction
+    attributes:
+      label: What needs to change, and why?
+      description: A suggested correction is welcome; explain uncertainty if the answer is not settled.
+    validations:
+      required: true
+  - type: textarea
+    id: sources
+    attributes:
+      label: Supporting evidence
+      description: Include primary-source URLs, device/software versions or a reproducible experiment. Do not upload licensed standards, private captures or credentials. Say if you have not verified the replacement claim.
