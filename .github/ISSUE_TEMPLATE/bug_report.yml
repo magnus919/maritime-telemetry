@@ -1,0 +1,36 @@
+name: Bug report
+description: Report incorrect behavior, a broken example or confusing instructions.
+title: "[Bug] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping improve Maritime Telemetry. Search existing issues first.
+        Issues and attachments are public: use synthetic or redacted data and remove
+        private vessel locations, real MMSIs, serial numbers and credentials.
+  - type: textarea
+    id: problem
+    attributes:
+      label: What happened, and what did you expect?
+      description: Include the affected file, command or guidance if you know it.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: How can we reproduce it?
+      description: Provide a small example, commands or a clearly labeled synthetic fixture. Say if reproduction requires hardware.
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Versions and environment
+      description: Include the repository commit and relevant agent client, OS, software or library versions. For hardware, include model and firmware; omit private serials.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence and test scope
+      description: Add redacted output or source links. Distinguish offline, simulated, compiled, bench or vessel observations, and mention anything untested.

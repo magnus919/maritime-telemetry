@@ -79,3 +79,12 @@ stale state without opening any device or network connection.
 
 For AIS projects, start with [AIS over NMEA 2000](references/ais-nmea2000.md) and its
 [reproducible lab](references/ais-n2k-laboratory.md), including measured translation limits.
+
+## Community and license
+
+New contributors are welcome. Start with [Contributing](CONTRIBUTING.md); project
+participation follows our [Code of Conduct](CODE_OF_CONDUCT.md). Use the
+[issue forms](https://github.com/magnus919/maritime-telemetry/issues/new/choose) for
+bugs, ideas or evidence corrections, and [Security](SECURITY.md) for private
+vulnerability reports. Agent contributors should read [AGENTS.md](AGENTS.md).
+Original repository content is available under the [MIT License](LICENSE).
