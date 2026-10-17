@@ -1,7 +1,9 @@
 # Research and fortification campaign
 
 Status: **software and documentary fortification executed; full campaign partial**.
-See the [execution ledger](runs/fortification.md) for results and remaining gates. Run IDs are stable. Planning baseline and
+See the [execution ledger](runs/fortification.md) for results and remaining gates.
+The subsequent [AIS/N2K run](runs/ais-n2k.md) deepens R02–R06/R11 with native AIS
+fixtures, conversion evidence and target-state handling; physical acceptance remains open. Run IDs are stable. Planning baseline and
 findings: [audit](audit.md). Discovery evidence: [reconnaissance](reconnaissance.md).
 This campaign is self-contained; no companion agent skills are runtime dependencies.
 

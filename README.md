@@ -52,6 +52,7 @@ firmware when available.
 ## Triggers
 
 - NMEA 0183 / NMEA 2000 wiring, sentences, PGNs and device discovery
+- AIS targets over N2K, Signal K and legacy0183, including identity and stale-data faults
 - DIY boat sensors, digital switching and instrument gateways
 - Raspberry Pi, Signal K, CANboat and OpenCPN interoperability
 - Incorrect units, missing data, duplicate sources or bridge loops
@@ -75,3 +76,6 @@ The [executed research report](research/runs/fortification.md) links the new rec
 source decisions and remaining equipment-dependent tests. Start the dependency-free
 lab with `python3 scripts/telemetry_lab.py`; it reports a fresh value and then its
 stale state without opening any device or network connection.
+
+For AIS projects, start with [AIS over NMEA 2000](references/ais-nmea2000.md) and its
+[reproducible lab](references/ais-n2k-laboratory.md), including measured translation limits.

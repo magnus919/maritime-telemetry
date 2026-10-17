@@ -1,0 +1,8 @@
+input_pgn,entity_key,source_provenance,fields,consumer_path,units_or_conversion,freshness_rule,observed_limit,acceptance_evidence
+129038,MMSI,bus plus receiver NAME and current address,"position;SOG;COG;heading;ROT",Signal K vessel context,"degrees;m/s;rad;rad/s",position age independent of static,"mapper4.7.0 omits valid zero coordinate",synthetic only; exact receiver pending
+129039,MMSI,bus plus receiver NAME and current address,"position;SOG;COG;heading",Signal K vessel context,"degrees;m/s;rad",position expiry configured per deployment,remaining flags require field audit,synthetic only
+129809,MMSI,bus plus receiver NAME and current address,name,join with129810,retain decoded string,does not refresh position,legacy25-byte form has no AIS transceiver info,synthetic25/26/27-byte cases
+129810,MMSI,bus plus receiver NAME and current address,"callsign;dimensions;vendor",join with129809,metres; geometry orientation explicit,does not refresh position,vendor absent in tested0183 conversion,synthetic33/35-byte cases
+129038,MMSI plus own policy,retain origin to prevent bridge loops,position,0183 VDM consumer,"rad to rounded degrees;m/s to knots",receipt age retained separately,"type1 becomes3;second and accuracy lost",offline converter2.0.3 plus pyais3.3.1
+129040,MMSI,receiver identity,extended Class B,0183 converter2.0.3,no emitted message,do not infer refresh,unsupported by tested converter,no consumer compatibility claim
+129041,AtoN MMSI,receiver identity,"position;virtual;off-position",Signal K atons context,verify exact mapper and consumer,aid-specific policy,source inspected only,physical and GUI tests pending

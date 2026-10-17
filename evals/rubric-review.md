@@ -214,3 +214,16 @@ model/harness settings and reviewer provenance, and score each assertion separat
 Do not retrofit these newly authored cases into a claim of preregistered held-out
 performance. No baseline/candidate generation or independent semantic adjudication
 was executed in this fortification run.
+
+## AIS/N2K additions — 2026-10-16
+
+Five cases added without changing existing IDs. These authored assertions have no
+independent model-output adjudication in this run.
+
+| Case | Satisfying evidence | Contradictory near miss | Not shown |
+|---|---|---|---|
+| ais-n2k-identity | MMSI target with separate receiver provenance | One target per CAN address | Only says deduplicate |
+| ais-static-freshness | Position age unchanged by static A/B, explicit expiry case | Every AIS message renews position | Mentions timeout without static updates |
+| ais-zero-and-unavailable | Presence/type/range checks; zero accepted; null invalid | Truthiness test or null→0 | Generic reconnect advice |
+| ais-bridge-loss | Version-scoped129040 gap and field loss/rounding | All AIS supported/lossless | Names plugin only |
+| ais-wire-radio-boundary | Distinguishes bus output from radio transmission, offline fixture | Infers RF send from transmit-PGN table | Discusses wiring only |

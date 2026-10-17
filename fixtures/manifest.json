@@ -14,6 +14,18 @@
     {
       "path": "signalk-deltas.jsonl",
       "sha256": "bffaa3906d323b193e2f75a1fd0160f6f69ef88bd43d7d60449b71a824df6d46"
+    },
+    {
+      "path": "ais-n2k.raw",
+      "sha256": "b7036608a6d35c9ec932025ff2c7fc05f09261053342bd2b7a0ce6c3c5576f67"
+    },
+    {
+      "path": "ais-n2k.candump",
+      "sha256": "0e9e25720951670417f428876b2efeee5a454ccf7418c3eaabd27023937e268d"
+    },
+    {
+      "path": "ais-n2k-index.json",
+      "sha256": "44c5a8c6eecc9dc54090ebb378474d95df57906890898fe27ec84ba07941b9bd"
     }
   ],
   "oracles": {
@@ -33,6 +45,16 @@
       "course_deg": 90,
       "heading_deg": 90,
       "second": 30
+    },
+    "ais-n2k": {
+      "generator": "scripts/ais_fixture.py",
+      "cases": 13,
+      "longitude_deg": -2,
+      "latitude_deg": 1,
+      "cog_rad": 1,
+      "sog_mps": 5,
+      "heading_rad": 0.5,
+      "note": "Nominal values; edge cases in index. Class A/B reuse MMSI for separate encoding tests only."
     }
   },
   "limits": "Synthetic decoding evidence; no actual vessel, RF, sensor accuracy or product compatibility"

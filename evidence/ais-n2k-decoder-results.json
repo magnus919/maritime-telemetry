@@ -1,0 +1,91 @@
+{
+  "passed": true,
+  "scope": "synthetic offline software only",
+  "library_vectors": 4,
+  "runs": [
+    {
+      "direct": {
+        "decoded_cases": 13,
+        "checks": [
+          "PGNs",
+          "receiver-vs-MMSI",
+          "SI-units",
+          "legacy-lengths",
+          "zero-coordinate",
+          "NA-position",
+          "own-marker",
+          "static-parts"
+        ]
+      },
+      "fast_packet": {
+        "decoded_cases": 13,
+        "checks": [
+          "PGNs",
+          "receiver-vs-MMSI",
+          "SI-units",
+          "legacy-lengths",
+          "zero-coordinate",
+          "NA-position",
+          "own-marker",
+          "static-parts"
+        ]
+      }
+    },
+    {
+      "direct": {
+        "decoded_cases": 13,
+        "checks": [
+          "PGNs",
+          "receiver-vs-MMSI",
+          "SI-units",
+          "legacy-lengths",
+          "zero-coordinate",
+          "NA-position",
+          "own-marker",
+          "static-parts"
+        ]
+      },
+      "fast_packet": {
+        "decoded_cases": 13,
+        "checks": [
+          "PGNs",
+          "receiver-vs-MMSI",
+          "SI-units",
+          "legacy-lengths",
+          "zero-coordinate",
+          "NA-position",
+          "own-marker",
+          "static-parts"
+        ]
+      }
+    },
+    {
+      "direct": {
+        "decoded_cases": 13,
+        "checks": [
+          "PGNs",
+          "receiver-vs-MMSI",
+          "SI-units",
+          "legacy-lengths",
+          "zero-coordinate",
+          "NA-position",
+          "own-marker",
+          "static-parts"
+        ]
+      },
+      "fast_packet": {
+        "decoded_cases": 13,
+        "checks": [
+          "PGNs",
+          "receiver-vs-MMSI",
+          "SI-units",
+          "legacy-lengths",
+          "zero-coordinate",
+          "NA-position",
+          "own-marker",
+          "static-parts"
+        ]
+      }
+    }
+  ]
+}
