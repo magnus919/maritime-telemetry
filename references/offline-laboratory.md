@@ -71,7 +71,9 @@ c++ -std=c++11 -I "$NMEA_STUDY_SOURCE/src" examples/protocol_oracle.cpp \
 Unlike the earlier heading probe, this example supplies a controllable `millis()`
 and, on Linux, a process-local `clock_gettime` adapter because the pinned library
 uses that clock directly. Both are confined to this fake-CAN executable; no system
-clock is set. Do not also link the upstream fixed-clock test stub. The fake CAN backend only
+clock is set. It starts at1ms so the Linux64-bit scheduler's strict comparison
+opens the fake controller, then advances past the200ms open and250ms claim windows.
+Do not also link the upstream fixed-clock test stub. The fake CAN backend only
 records in-memory frames. Four independent scaled-integer byte vectors cover depth,
 rapid position, battery and wind. The lifecycle test observes address claiming,
 publication held during claim, publication after the timer, and moving address after

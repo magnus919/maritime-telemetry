@@ -55,3 +55,8 @@ assertion. Pinned NMEA2000 uses clock_gettime on Linux and millis on the recorde
 macOS path. The host probe now supplies both deterministic test-clock adapters in
 its own process. The original macOS observation remains historical; Linux acceptance
 requires the updated PR job to pass. No upstream clock or live system time is changed.
+
+A second run exposed the Linux64-bit scheduler's strict greater-than comparison
+at the initial zero deadline. The probe now starts the fake clock above zero and
+advances beyond both windows. This corrects the harness initialization; timing
+assertions remain required rather than skipped.
