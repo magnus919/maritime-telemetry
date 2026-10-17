@@ -13,15 +13,22 @@ interoperability workbench. Prepared 2026-10-16 against commit
 - [Frozen reconnaissance scope](reconnaissance-scope.md).
 - [Run worksheet](run-template.md): copy for each actual research run.
 
-**Completed:** repository audit, bounded source reconnaissance and campaign design.
-**Not completed:** R01–R16, new integrations, hardware tests or agent-output evaluation.
-The current validator and all 17 Python tests passed during this audit. Their result
-establishes the existing test scope, not end-to-end interoperability.
+## Current execution status
 
-Start with R01/R02 and R16's evaluation design. Build the offline pipeline before
-adding devices; then deliver the three tested recipes described in R11. Keep
-hardware compatibility and normative-standard dependencies visible when unavailable.
-This directory is maintainer planning material, not a runtime dependency of the skill.
+The initial audit/reconnaissance above was a historical17-test snapshot. Subsequent
+work delivered runnable protocol and AIS experiments, templates, source claims and
+broader regression tests. Use the dated execution ledgers for actual results:
+
+- [Fortification run](runs/fortification.md): software/domain coverage and per-run gates.
+- [AIS/N2K run](runs/ais-n2k.md):13 synthetic cases and observed mapping/conversion limits.
+- [Dependency remediation](../evidence/dependency-remediation.md): current server-lab
+  quarantine and the clean supported mapping lab.
+
+The full R01–R16 campaign remains partial. Physical interoperability, licensed
+normative review and independent agent-output evaluation are still uncompleted.
+Current CI checks code, coverage and selected software integrations; firmware and
+hardware acceptance remain separate evidence. This directory is maintainer material,
+not a runtime dependency of the installed skill.
 
 ## Concrete case-study input
 

@@ -40,6 +40,19 @@ Report implemented, simulated, decoded, compiled, bench-tested, vessel-tested an
 not assessed separately. Do not infer compatibility from compilation or turn a
 known dependency limitation into a successful interoperability claim.
 
+## Change contract
+
+Every code, build/configuration and dependency update must include relevant
+updated documentation and updated tests in the same PR. Update example commands,
+version pins, routing and current research/status indexes affected by the change.
+Keep historical evidence intact and add a new dated result for new verification.
+Do not leave stale status text behind or use an unrelated doc/test edit to satisfy
+CI. An eval manifest or a saved output alone is not a test update.
+
+`main` is PR-only and requires `required-ci`; this applies to the maintainer too.
+No reviewer approval is required. Never direct-push, force-push or bypass a failed
+check. The policy is compatible with a sole maintainer merging their own passing PR.
+
 ## Validation
 
 Run from the repository root:
@@ -53,6 +66,18 @@ Use meaningful regression tests for executable changes. Do not add device/networ
 side effects to the offline inspector or paid calls to CI. Optional C++, Node,
 PlatformIO and pyais probes are run only when relevant; follow their documented
 version and isolation contracts. Report commands run, outcomes and unperformed work.
+
+Install `requirements-dev.txt` for `python3 -m coverage run -m unittest discover
+-s scripts -p 'test_*.py'`, then run `python3 -m coverage report`. The combined
+statement/branch floor is 85%, with test files excluded. Before opening a PR, run
+`python3 scripts/check_change_contract.py --base origin/main --head HEAD` against
+committed changes. Required CI also executes the pinned C++/AIS mapping chain and
+npm advisory checks. See CONTRIBUTING.md for the full check contract.
+
+The old full-server Signal K lab is quarantined because compatible dependency
+updates did not remove known advisories. Do not reinstall/re-enable it, suppress
+advisories or introduce cross-major overrides without a tested supported remediation
+plan. Use the clean AIS mapping lab for its explicitly narrower scope.
 
 Preserve eval IDs and the v1 `assertions` field. Add reviewable rubric examples for
 new or changed cases. Schema-valid manifests and passing utility tests do not

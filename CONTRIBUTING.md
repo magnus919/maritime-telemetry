@@ -42,6 +42,56 @@ PlatformIO and pyais experiments have separate instructions in their references;
 run only the ones relevant to your change. No hosted provider calls are part of CI.
 A documentation-only contribution does not need a hardware experiment.
 
+## Required documentation, tests and CI
+
+**Every code, build/configuration or dependency update must include relevant
+updated documentation and updated tests in the same PR.** Keep examples, commands,
+version pins, task routes and current status pages consistent with the change.
+Describe historical results as historical; do not rewrite them as new verification.
+Documentation-only changes still run the standard checks but do not need a new test.
+
+The PR co-change check requires a documentation file and a test update when code,
+workflow, dependency or build configuration changes. Python test files and the
+executable integration probes/oracles count as tests; an eval manifest or a saved
+result alone does not. This verifies file presence, not relevance: review must
+confirm that the tests exercise the change and the docs describe its actual result.
+
+Required CI checks include:
+
+- Structural validation and Python tests on 3.10, 3.12 and 3.14.
+- At least **85% combined Python statement/branch coverage**, excluding test files.
+  CI uploads the coverage report; this floor is a minimum, not proof of correctness.
+- Pinned C++ protocol/AIS vectors, CANboat decoding, real Signal K mapping and
+  independent pyais inspection under Node 24/Python 3.12.
+- An npm audit that fails on moderate-or-higher advisories in the runnable AIS lab.
+- The documentation/test co-change contract. The aggregate `required-ci` check
+  fails if a required job fails, is cancelled or is skipped.
+
+Run the additional checks locally when relevant:
+
+```sh
+python3 -m pip install -r requirements-dev.txt
+python3 -m coverage run -m unittest discover -s scripts -p 'test_*.py'
+python3 -m coverage report
+python3 scripts/check_change_contract.py --base origin/main --head HEAD
+```
+
+The co-change command compares commits; commit your local changes before using it.
+See [the AIS lab](references/ais-n2k-laboratory.md) for integration reproduction.
+Firmware compilation and hardware commissioning remain separate manual checks.
+The old full-server lab is [quarantined](examples/signalk-lab/README.md); its
+historical pass does not satisfy current integration or security requirements.
+
+`main` requires PRs and passing `required-ci`, including for the maintainer. It
+requires zero approving reviews so the sole maintainer can merge their own PRs;
+GitHub does not support approving your own PR. Force pushes and branch deletion
+are blocked. Do not bypass these rules to land a fix.
+
+Weekly dependency audits and Dependabot PRs keep the runnable example and tooling
+under review. A dependency PR still needs updated validation tests and documentation
+before merge. No security-advisory waivers or unreviewed cross-major overrides are
+part of the policy.
+
 ## Keep the skill useful and self-contained
 
 Core instructions belong in `SKILL.md`; focused technical detail belongs in

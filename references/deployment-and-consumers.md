@@ -69,7 +69,7 @@ path because each connection individually works.
 
 | Recipe | Concrete artifacts | Current evidence |
 |---|---|---|
-| Capture → CANboat → application semantics | Original heading capture, C-tool command, expected SI fields; Signal K lab demonstrates delivery separately | Individual stages executed; no automatic CANboat-to-Signal-K adapter tested |
+| Capture → CANboat → application semantics | Original heading capture, C-tool command, expected SI fields; historical server lab demonstrated delivery separately; now quarantined | Individual stages executed; full-server lab quarantined; no current complete server chain |
 | ESP32 → N2K → commercial instrument | Pinned compile-only project; device/translation contracts | Firmware compile; bus disabled; no consumer pass |
 | Pi gateway → OpenCPN | Current installation source, selection workflow, recovery and compatibility templates | Documentation-based; no Pi or GUI observation |
 

@@ -10,23 +10,19 @@ install of schema 1.8.4 failed because that version was not published; npm repor
 claims that one number is the universally current Signal K version. Record schema
 package, documentation snapshot, server release and plugins independently.
 
-The [local lab](../examples/signalk-lab/lab.cjs) uses server 2.33.0, schema 1.8.2 and
-WebSocket client 8.18.3 with a lockfile. Commands from that directory:
+## Full-server lab status: quarantined
 
-```sh
-npm ci --ignore-scripts --no-audit --no-fund
-node lab.cjs
-```
+The former [full-server lab](../examples/signalk-lab/README.md) used server2.33.0,
+schema1.8.2 and ws8.18.3. Its earlier discovery/REST/WebSocket/null/reconnect/PUT
+results are historical software evidence, not a current security recommendation.
+Compatible dependency refreshes left known advisories, so the current installer,
+lockfile and runner were removed. Do not run the old `npm ci`/`node lab.cjs` recipe.
+See the [remediation record](../evidence/dependency-remediation.md).
 
-The lab forces TCP listeners to loopback in its own process, disables mDNS and
-unneeded interfaces, uses synthetic data and temporary configuration, and rejects
-anonymous PUT. It uses the real server's `handleMessage` input seam, REST routes and
-WebSocket stream; it does not test a physical/provider input adapter. It exits after
-cleanup because upstream imports retain background handles. Server startup logs
-still print its nominal wildcard/3000 message; the probe asserts the actual socket
-address is loopback and reads its allocated port. This wrapper is test plumbing,
-not a production bind-setting recipe. Runtime was Node 26.10.0; upstream recommended
-Node 24 and emitted a warning. Reproduce on your chosen supported Node version.
+The [AIS mapping lab](ais-n2k-laboratory.md) remains executable and CI-tested with
+a clean npm audit. It uses real mapping/converter functions and an event bus; it
+does not boot a Signal K server or verify HTTP/WebSocket/authentication behavior.
+Those server checks must be re-established after a supported remediation exists.
 
 ## Producer, metadata and client responsibilities
 
@@ -90,8 +86,8 @@ module.exports = app => {
 ```
 
 The constant is explicitly synthetic; do not install it alongside real navigation
-or sensor sources without labeling and source selection. The server lab exercises
-input delivery, not this plugin's lifecycle.
+or sensor sources without labeling and source selection. The historical server lab exercised
+input delivery, not this plugin's lifecycle; it is now quarantined.
 
 ## Reconnect and authorization matrix
 

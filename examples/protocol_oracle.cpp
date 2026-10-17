@@ -8,6 +8,16 @@
 #include "N2kMessages.h"
 static uint32_t clock_ms=0;
 extern "C" uint32_t millis(){return clock_ms;}
+#if defined(__linux__)
+#include <time.h>
+// The pinned Linux timer uses clock_gettime, not millis. This standalone fake-CAN
+// executable supplies a deterministic process-local clock for its timing assertions.
+extern "C" int clock_gettime(clockid_t, struct timespec* value) noexcept {
+ value->tv_sec=clock_ms/1000;
+ value->tv_nsec=static_cast<long>(clock_ms%1000)*1000000;
+ return 0;
+}
+#endif
 struct Frame { unsigned long id; unsigned char len; unsigned char data[8]; };
 class FakeCAN: public tNMEA2000 {
  public:
@@ -36,10 +46,11 @@ int main(){
  unsigned char wind[]={4,0xf4,1,0x10,0x27,2,0xff,0xff};
  SetN2kPGN130306(m,4,5,1,N2kWind_Apparent);ok=check("wind",m,130306,wind)&&ok;
  FakeCAN bus;bus.SetMode(tNMEA2000::N2km_NodeOnly,35);bus.SetForwardStream(nullptr);
- bus.Open();clock_ms=201;bus.ParseMessages();
+ // Start above zero: Linux's 64-bit scheduler uses a strict now > deadline test.
+ clock_ms=1;bus.Open();clock_ms=202;bus.ParseMessages();
  bool claimed=false;for(const auto &f:bus.sent)if(((f.id>>16)&0xff)==0xee)claimed=true;
  SetN2kPGN127250(m,7,1,0,0,N2khr_true);
- bool held=!bus.SendMsg(m);clock_ms=452;bus.ParseMessages();bool allowed=bus.SendMsg(m);
+ bool held=!bus.SendMsg(m);clock_ms=453;bus.ParseMessages();bool allowed=bus.SendMsg(m);
  // Lower numeric NAME (all zero, synthetic test only) wins our preferred address.
  Frame conflict{};conflict.id=0x18eeff23;conflict.len=8;bus.input.push_back(conflict);
  bus.ParseMessages();bool moved=bus.GetN2kSource()!=35;
