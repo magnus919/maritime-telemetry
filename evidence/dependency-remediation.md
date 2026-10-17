@@ -47,3 +47,11 @@ chosen version. A mapping function test does not substitute for those server tes
 - Current AIS mapping audit and exact CI execution are visible on the PR/merge
   checks. The coverage/test count is produced by CI rather than hard-coded into a
   status page that can silently become stale.
+
+## CI portability correction
+
+The first expanded Ubuntu integration run failed the fake-CAN address lifecycle
+assertion. Pinned NMEA2000 uses clock_gettime on Linux and millis on the recorded
+macOS path. The host probe now supplies both deterministic test-clock adapters in
+its own process. The original macOS observation remains historical; Linux acceptance
+requires the updated PR job to pass. No upstream clock or live system time is changed.

@@ -8,6 +8,16 @@
 #include "N2kMessages.h"
 static uint32_t clock_ms=0;
 extern "C" uint32_t millis(){return clock_ms;}
+#if defined(__linux__)
+#include <time.h>
+// The pinned Linux timer uses clock_gettime, not millis. This standalone fake-CAN
+// executable supplies a deterministic process-local clock for its timing assertions.
+extern "C" int clock_gettime(clockid_t, struct timespec* value) noexcept {
+ value->tv_sec=clock_ms/1000;
+ value->tv_nsec=static_cast<long>(clock_ms%1000)*1000000;
+ return 0;
+}
+#endif
 struct Frame { unsigned long id; unsigned char len; unsigned char data[8]; };
 class FakeCAN: public tNMEA2000 {
  public:
