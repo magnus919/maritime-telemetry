@@ -20,11 +20,9 @@ Stop when someone asks you to stop unwanted contact or behavior.
 
 ## Reporting a concern
 
-For a private project moderation contact, open a minimal
-[contact-request issue](https://github.com/magnus919/maritime-telemetry/issues/new?title=Private%20moderation%20contact%20request)
-asking the maintainer for a private reporting route. Do not include incident details,
-identify the people involved or attach private evidence in that public request.
-A dedicated project reporting address has not yet been published.
+Email [magnus919@pm.me](mailto:magnus919@pm.me) to report a conduct concern privately.
+Include the relevant context and links or evidence you are comfortable sharing.
+Do not post incident details or identify the people involved in a public issue.
 
 You can also use GitHub's **Report abuse** option for content or behavior that
 violates its platform rules, including when a concern involves a project maintainer.
@@ -42,6 +40,6 @@ They will consider the context, severity and pattern of behavior and give an
 explanation where practical. Reports and private evidence should be shared only
 with those needed to review and respond to the concern.
 
-To ask for a moderation decision to be reconsidered, request a private maintainer
-contact as described above and provide relevant context. Maintainers are expected
-to follow this code too. No response deadline or absolute confidentiality is promised.
+To ask for a moderation decision to be reconsidered, email the same contact and
+provide relevant context. Maintainers are expected to follow this code too. No
+response deadline or absolute confidentiality is promised.
