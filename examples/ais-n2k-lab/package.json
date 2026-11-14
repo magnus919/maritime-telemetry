@@ -5,7 +5,7 @@
   "description": "Offline synthetic AIS conversion probes; no network listeners or vessel IO",
   "dependencies": {
     "@signalk/n2k-signalk": "4.7.0",
-    "@signalk/signalk-schema": "1.8.2",
+    "@signalk/signalk-schema": "1.8.6",
     "signalk-n2kais-to-nmea0183": "2.0.3"
   }
 }
